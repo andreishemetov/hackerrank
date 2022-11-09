@@ -8,6 +8,7 @@
 #ifndef caesarCipher_ex_hpp
 #define caesarCipher_ex_hpp
 
-#include <stdio.h>
+void caesarCipher_ex();
+
 
 #endif /* caesarCipher_ex_hpp */

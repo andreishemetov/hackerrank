@@ -8,6 +8,6 @@
 #ifndef maxMin_ex_hpp
 #define maxMin_ex_hpp
 
-#include <stdio.h>
+void maxMin_ex();
 
 #endif /* maxMin_ex_hpp */

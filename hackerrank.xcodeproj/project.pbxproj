@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1FC6B6832913A8440090AB83 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FC6B6822913A8440090AB83 /* main.cpp */; };
+		1FD5B1EA291AAC0700A14D0E /* caesarCipher_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5B1E8291AAC0700A14D0E /* caesarCipher_ex.cpp */; };
+		1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		1FC6B67F2913A8440090AB83 /* hackerrank */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hackerrank; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC6B6822913A8440090AB83 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1FD5B1E8291AAC0700A14D0E /* caesarCipher_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = caesarCipher_ex.cpp; sourceTree = "<group>"; };
+		1FD5B1E9291AAC0700A14D0E /* caesarCipher_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = caesarCipher_ex.hpp; sourceTree = "<group>"; };
+		1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = maxMin_ex.cpp; sourceTree = "<group>"; };
+		1FD5B1EC291AB1B000A14D0E /* maxMin_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = maxMin_ex.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				1FC6B6822913A8440090AB83 /* main.cpp */,
+				1FD5B1E8291AAC0700A14D0E /* caesarCipher_ex.cpp */,
+				1FD5B1E9291AAC0700A14D0E /* caesarCipher_ex.hpp */,
+				1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */,
+				1FD5B1EC291AB1B000A14D0E /* maxMin_ex.hpp */,
 			);
 			path = hackerrank;
 			sourceTree = "<group>";
@@ -119,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */,
 				1FC6B6832913A8440090AB83 /* main.cpp in Sources */,
+				1FD5B1EA291AAC0700A14D0E /* caesarCipher_ex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

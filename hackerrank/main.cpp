@@ -6,9 +6,17 @@
 //
 
 #include <iostream>
+#include "caesarCipher_ex.hpp"
+#include "maxMin_ex.hpp"
+
+using namespace std;
+
+
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    cout << "Hello, HackerRank!\n";
+//    caesarCipher_ex();
+    maxMin_ex();
     return 0;
 }
