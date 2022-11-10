@@ -9,6 +9,7 @@
 #include "caesarCipher_ex.hpp"
 #include "maxMin_ex.hpp"
 #include "dynamicArray_ex.hpp"
+#include "gridChallenge_ex.hpp"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ int main(int argc, const char * argv[]) {
     cout << "Hello, HackerRank!\n";
 //    caesarCipher_ex();
 //    maxMin_ex();
-    dynamicArray_ex();
+//    dynamicArray_ex();
+    gridChallenge_ex();
     return 0;
 }
