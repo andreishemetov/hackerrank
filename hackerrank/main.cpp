@@ -8,6 +8,7 @@
 #include <iostream>
 #include "caesarCipher_ex.hpp"
 #include "maxMin_ex.hpp"
+#include "dynamicArray_ex.hpp"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     cout << "Hello, HackerRank!\n";
 //    caesarCipher_ex();
-    maxMin_ex();
+//    maxMin_ex();
+    dynamicArray_ex();
     return 0;
 }
