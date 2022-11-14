@@ -11,6 +11,7 @@
 #include "dynamicArray_ex.hpp"
 #include "gridChallenge_ex.hpp"
 #include "primeDates_ex.hpp"
+#include "recursiveDigitSum_ex.hpp"
 
 using namespace std;
 
@@ -23,6 +24,7 @@ int main(int argc, const char * argv[]) {
 //    maxMin_ex();
 //    dynamicArray_ex();
 //    gridChallenge_ex();
-    primeDates_ex();
+//    primeDates_ex();
+    recursiveDigitSum_ex();
     return 0;
 }
