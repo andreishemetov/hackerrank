@@ -14,6 +14,7 @@
 #include "recursiveDigitSum_ex.hpp"
 #include "reverseArray_ex.hpp"
 #include "hourglassSum_ex.hpp"
+#include "sparse_arrays_ex.hpp"
 
 using namespace std;
 
@@ -29,6 +30,7 @@ int main(int argc, const char * argv[]) {
 //    primeDates_ex();
 //    recursiveDigitSum_ex();
 //    reverseArray_ex();
-    hourglassSum_ex();
+//    hourglassSum_ex();
+    sparse_arrays_ex();
     return 0;
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F1A8630295603A3003E5F1E /* hourglassSum_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A862E295603A3003E5F1E /* hourglassSum_ex.cpp */; };
+		1F1A863329560814003E5F1E /* sparse_arrays_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F1A863129560814003E5F1E /* sparse_arrays_ex.cpp */; };
 		1F1BD3E32922803D00EB0B7C /* recursiveDigitSum_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BD3E12922803D00EB0B7C /* recursiveDigitSum_ex.cpp */; };
 		1F662085291E471300A6C45D /* primeDates_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F662083291E471300A6C45D /* primeDates_ex.cpp */; };
 		1FC2E6F72955B3FF00BDDEBE /* bomberman_Game_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FC2E6F62955B3FF00BDDEBE /* bomberman_Game_ex.cpp */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		1F1A862E295603A3003E5F1E /* hourglassSum_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hourglassSum_ex.cpp; sourceTree = "<group>"; };
 		1F1A862F295603A3003E5F1E /* hourglassSum_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hourglassSum_ex.hpp; sourceTree = "<group>"; };
+		1F1A863129560814003E5F1E /* sparse_arrays_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sparse_arrays_ex.cpp; sourceTree = "<group>"; };
+		1F1A863229560814003E5F1E /* sparse_arrays_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sparse_arrays_ex.hpp; sourceTree = "<group>"; };
 		1F1BD3E12922803D00EB0B7C /* recursiveDigitSum_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = recursiveDigitSum_ex.cpp; sourceTree = "<group>"; };
 		1F1BD3E22922803D00EB0B7C /* recursiveDigitSum_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = recursiveDigitSum_ex.hpp; sourceTree = "<group>"; };
 		1F662083291E471300A6C45D /* primeDates_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = primeDates_ex.cpp; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				1FC2E6F92955B4D200BDDEBE /* reverseArray_ex.hpp */,
 				1F1A862E295603A3003E5F1E /* hourglassSum_ex.cpp */,
 				1F1A862F295603A3003E5F1E /* hourglassSum_ex.hpp */,
+				1F1A863129560814003E5F1E /* sparse_arrays_ex.cpp */,
+				1F1A863229560814003E5F1E /* sparse_arrays_ex.hpp */,
 			);
 			path = hackerrank;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				75E2DDD2291D1F0700574975 /* gridChallenge_ex.cpp in Sources */,
 				1F662085291E471300A6C45D /* primeDates_ex.cpp in Sources */,
 				1F1BD3E32922803D00EB0B7C /* recursiveDigitSum_ex.cpp in Sources */,
+				1F1A863329560814003E5F1E /* sparse_arrays_ex.cpp in Sources */,
 				1FC2E6F72955B3FF00BDDEBE /* bomberman_Game_ex.cpp in Sources */,
 				1F1A8630295603A3003E5F1E /* hourglassSum_ex.cpp in Sources */,
 				1FC2E6FA2955B4D200BDDEBE /* reverseArray_ex.cpp in Sources */,
