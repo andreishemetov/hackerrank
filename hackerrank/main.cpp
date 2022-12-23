@@ -13,6 +13,7 @@
 #include "primeDates_ex.hpp"
 #include "recursiveDigitSum_ex.hpp"
 #include "reverseArray_ex.hpp"
+#include "hourglassSum_ex.hpp"
 
 using namespace std;
 
@@ -27,6 +28,7 @@ int main(int argc, const char * argv[]) {
 //    gridChallenge_ex();
 //    primeDates_ex();
 //    recursiveDigitSum_ex();
-    reverseArray_ex();
+//    reverseArray_ex();
+    hourglassSum_ex();
     return 0;
 }
