@@ -12,6 +12,7 @@
 #include "gridChallenge_ex.hpp"
 #include "primeDates_ex.hpp"
 #include "recursiveDigitSum_ex.hpp"
+#include "reverseArray_ex.hpp"
 
 using namespace std;
 
@@ -25,6 +26,7 @@ int main(int argc, const char * argv[]) {
 //    dynamicArray_ex();
 //    gridChallenge_ex();
 //    primeDates_ex();
-    recursiveDigitSum_ex();
+//    recursiveDigitSum_ex();
+    reverseArray_ex();
     return 0;
 }
