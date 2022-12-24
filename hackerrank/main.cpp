@@ -12,6 +12,8 @@
 #include "gridChallenge_ex.hpp"
 #include "primeDates_ex.hpp"
 #include "recursiveDigitSum_ex.hpp"
+#include "sumVsXor_ex.hpp"
+#include "bomberman_Game_ex.hpp"
 
 using namespace std;
 
@@ -25,6 +27,8 @@ int main(int argc, const char * argv[]) {
 //    dynamicArray_ex();
 //    gridChallenge_ex();
 //    primeDates_ex();
-    recursiveDigitSum_ex();
+//    recursiveDigitSum_ex();
+//    sumVsXor_ex();
+    bomberman_game_ex();
     return 0;
 }

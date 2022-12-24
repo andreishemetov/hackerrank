@@ -8,6 +8,6 @@
 #ifndef sumVsXor_ex_hpp
 #define sumVsXor_ex_hpp
 
-#include <stdio.h>
+void sumVsXor_ex();
 
 #endif /* sumVsXor_ex_hpp */

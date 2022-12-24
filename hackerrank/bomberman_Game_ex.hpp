@@ -8,6 +8,6 @@
 #ifndef bomberman_Game_ex_hpp
 #define bomberman_Game_ex_hpp
 
-#include <stdio.h>
+void bomberman_game_ex();
 
 #endif /* bomberman_Game_ex_hpp */

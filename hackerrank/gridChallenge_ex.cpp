@@ -52,5 +52,3 @@ void gridChallenge_ex(){
     cout <<"calcResult:"<<calcResult<<" expResult:"<<expResult<<" >> Test "<<result<<endl;
     cout<<endl;
 }
-
-

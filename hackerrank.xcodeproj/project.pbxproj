@@ -14,6 +14,8 @@
 		1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */; };
 		7593380D291C9D2A00846DBE /* dynamicArray_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7593380B291C9D2900846DBE /* dynamicArray_ex.cpp */; };
 		75E2DDD2291D1F0700574975 /* gridChallenge_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD0291D1F0700574975 /* gridChallenge_ex.cpp */; };
+		75E2DDD5292FDB8C00574975 /* sumVsXor_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD3292FDB8C00574975 /* sumVsXor_ex.cpp */; };
+		75E2DDD8292FF5B400574975 /* bomberman_Game_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD6292FF5B400574975 /* bomberman_Game_ex.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,10 @@
 		7593380C291C9D2A00846DBE /* dynamicArray_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dynamicArray_ex.hpp; sourceTree = "<group>"; };
 		75E2DDD0291D1F0700574975 /* gridChallenge_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gridChallenge_ex.cpp; sourceTree = "<group>"; };
 		75E2DDD1291D1F0700574975 /* gridChallenge_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gridChallenge_ex.hpp; sourceTree = "<group>"; };
+		75E2DDD3292FDB8C00574975 /* sumVsXor_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sumVsXor_ex.cpp; sourceTree = "<group>"; };
+		75E2DDD4292FDB8C00574975 /* sumVsXor_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sumVsXor_ex.hpp; sourceTree = "<group>"; };
+		75E2DDD6292FF5B400574975 /* bomberman_Game_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bomberman_Game_ex.cpp; sourceTree = "<group>"; };
+		75E2DDD7292FF5B400574975 /* bomberman_Game_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bomberman_Game_ex.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,10 @@
 				1F662084291E471300A6C45D /* primeDates_ex.hpp */,
 				1F1BD3E12922803D00EB0B7C /* recursiveDigitSum_ex.cpp */,
 				1F1BD3E22922803D00EB0B7C /* recursiveDigitSum_ex.hpp */,
+				75E2DDD3292FDB8C00574975 /* sumVsXor_ex.cpp */,
+				75E2DDD4292FDB8C00574975 /* sumVsXor_ex.hpp */,
+				75E2DDD6292FF5B400574975 /* bomberman_Game_ex.cpp */,
+				75E2DDD7292FF5B400574975 /* bomberman_Game_ex.hpp */,
 			);
 			path = hackerrank;
 			sourceTree = "<group>";
@@ -149,9 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E2DDD8292FF5B400574975 /* bomberman_Game_ex.cpp in Sources */,
 				7593380D291C9D2A00846DBE /* dynamicArray_ex.cpp in Sources */,
 				1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */,
 				1FC6B6832913A8440090AB83 /* main.cpp in Sources */,
+				75E2DDD5292FDB8C00574975 /* sumVsXor_ex.cpp in Sources */,
 				75E2DDD2291D1F0700574975 /* gridChallenge_ex.cpp in Sources */,
 				1F662085291E471300A6C45D /* primeDates_ex.cpp in Sources */,
 				1F1BD3E32922803D00EB0B7C /* recursiveDigitSum_ex.cpp in Sources */,
