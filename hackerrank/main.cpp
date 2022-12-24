@@ -14,6 +14,10 @@
 #include "recursiveDigitSum_ex.hpp"
 #include "sumVsXor_ex.hpp"
 #include "bomberman_Game_ex.hpp"
+#include "reverseArray_ex.hpp"
+#include "hourglassSum_ex.hpp"
+#include "sparse_arrays_ex.hpp"
+#include "array_manipulation_ex.hpp"
 
 using namespace std;
 
@@ -29,6 +33,10 @@ int main(int argc, const char * argv[]) {
 //    primeDates_ex();
 //    recursiveDigitSum_ex();
 //    sumVsXor_ex();
-    bomberman_game_ex();
+//    bomberman_game_ex();
+//    reverseArray_ex();
+//    hourglassSum_ex();
+//    sparse_arrays_ex();
+    array_manipulation_ex();
     return 0;
 }

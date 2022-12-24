@@ -12,6 +12,10 @@
 		1FC6B6832913A8440090AB83 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FC6B6822913A8440090AB83 /* main.cpp */; };
 		1FD5B1EA291AAC0700A14D0E /* caesarCipher_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5B1E8291AAC0700A14D0E /* caesarCipher_ex.cpp */; };
 		1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */; };
+		7582434C2957226700E97A4B /* array_manipulation_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 758243472957226700E97A4B /* array_manipulation_ex.cpp */; };
+		7582434D2957226700E97A4B /* reverseArray_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 758243482957226700E97A4B /* reverseArray_ex.cpp */; };
+		7582434E2957226700E97A4B /* sparse_arrays_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 758243492957226700E97A4B /* sparse_arrays_ex.cpp */; };
+		7582434F2957226700E97A4B /* hourglassSum_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7582434A2957226700E97A4B /* hourglassSum_ex.cpp */; };
 		7593380D291C9D2A00846DBE /* dynamicArray_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7593380B291C9D2900846DBE /* dynamicArray_ex.cpp */; };
 		75E2DDD2291D1F0700574975 /* gridChallenge_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD0291D1F0700574975 /* gridChallenge_ex.cpp */; };
 		75E2DDD5292FDB8C00574975 /* sumVsXor_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD3292FDB8C00574975 /* sumVsXor_ex.cpp */; };
@@ -41,6 +45,14 @@
 		1FD5B1E9291AAC0700A14D0E /* caesarCipher_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = caesarCipher_ex.hpp; sourceTree = "<group>"; };
 		1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = maxMin_ex.cpp; sourceTree = "<group>"; };
 		1FD5B1EC291AB1B000A14D0E /* maxMin_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = maxMin_ex.hpp; sourceTree = "<group>"; };
+		758243442957226700E97A4B /* reverseArray_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reverseArray_ex.hpp; sourceTree = "<group>"; };
+		758243452957226700E97A4B /* hourglassSum_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hourglassSum_ex.hpp; sourceTree = "<group>"; };
+		758243462957226700E97A4B /* array_manipulation_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = array_manipulation_ex.hpp; sourceTree = "<group>"; };
+		758243472957226700E97A4B /* array_manipulation_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = array_manipulation_ex.cpp; sourceTree = "<group>"; };
+		758243482957226700E97A4B /* reverseArray_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = reverseArray_ex.cpp; sourceTree = "<group>"; };
+		758243492957226700E97A4B /* sparse_arrays_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sparse_arrays_ex.cpp; sourceTree = "<group>"; };
+		7582434A2957226700E97A4B /* hourglassSum_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hourglassSum_ex.cpp; sourceTree = "<group>"; };
+		7582434B2957226700E97A4B /* sparse_arrays_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sparse_arrays_ex.hpp; sourceTree = "<group>"; };
 		7593380B291C9D2900846DBE /* dynamicArray_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dynamicArray_ex.cpp; sourceTree = "<group>"; };
 		7593380C291C9D2A00846DBE /* dynamicArray_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dynamicArray_ex.hpp; sourceTree = "<group>"; };
 		75E2DDD0291D1F0700574975 /* gridChallenge_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gridChallenge_ex.cpp; sourceTree = "<group>"; };
@@ -81,6 +93,14 @@
 		1FC6B6812913A8440090AB83 /* hackerrank */ = {
 			isa = PBXGroup;
 			children = (
+				758243472957226700E97A4B /* array_manipulation_ex.cpp */,
+				758243462957226700E97A4B /* array_manipulation_ex.hpp */,
+				7582434A2957226700E97A4B /* hourglassSum_ex.cpp */,
+				758243452957226700E97A4B /* hourglassSum_ex.hpp */,
+				758243482957226700E97A4B /* reverseArray_ex.cpp */,
+				758243442957226700E97A4B /* reverseArray_ex.hpp */,
+				758243492957226700E97A4B /* sparse_arrays_ex.cpp */,
+				7582434B2957226700E97A4B /* sparse_arrays_ex.hpp */,
 				1FC6B6822913A8440090AB83 /* main.cpp */,
 				1FD5B1E8291AAC0700A14D0E /* caesarCipher_ex.cpp */,
 				1FD5B1E9291AAC0700A14D0E /* caesarCipher_ex.hpp */,
@@ -160,14 +180,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E2DDD8292FF5B400574975 /* bomberman_Game_ex.cpp in Sources */,
+				7582434C2957226700E97A4B /* array_manipulation_ex.cpp in Sources */,
 				7593380D291C9D2A00846DBE /* dynamicArray_ex.cpp in Sources */,
+				7582434F2957226700E97A4B /* hourglassSum_ex.cpp in Sources */,
 				1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */,
 				1FC6B6832913A8440090AB83 /* main.cpp in Sources */,
 				75E2DDD5292FDB8C00574975 /* sumVsXor_ex.cpp in Sources */,
 				75E2DDD2291D1F0700574975 /* gridChallenge_ex.cpp in Sources */,
 				1F662085291E471300A6C45D /* primeDates_ex.cpp in Sources */,
+				7582434E2957226700E97A4B /* sparse_arrays_ex.cpp in Sources */,
 				1F1BD3E32922803D00EB0B7C /* recursiveDigitSum_ex.cpp in Sources */,
 				1FD5B1EA291AAC0700A14D0E /* caesarCipher_ex.cpp in Sources */,
+				7582434D2957226700E97A4B /* reverseArray_ex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
