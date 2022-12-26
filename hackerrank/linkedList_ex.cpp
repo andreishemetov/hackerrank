@@ -67,6 +67,24 @@ SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* llist, int data
         return llist;
 }
 
+SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* llist, int position) {
+        if (position == 0) {
+            return llist->next;
+        }
+            
+        SinglyLinkedListNode* node = llist;
+        int pos = 0;
+        while (node->next) {
+            pos++;
+            if (pos == position){
+                node->next = node->next->next;
+                break;
+            }
+            node = node->next;
+        }
+        return llist;
+}
+
 void linkedList_ex(){
     SinglyLinkedListNode *list = NULL;
     list = insertNodeAtTail(list, 1);
