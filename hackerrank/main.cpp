@@ -18,6 +18,7 @@
 #include "hourglassSum_ex.hpp"
 #include "sparse_arrays_ex.hpp"
 #include "array_manipulation_ex.hpp"
+#include "linkedList_ex.hpp"
 
 using namespace std;
 
@@ -37,6 +38,7 @@ int main(int argc, const char * argv[]) {
 //    reverseArray_ex();
 //    hourglassSum_ex();
 //    sparse_arrays_ex();
-    array_manipulation_ex();
+//    array_manipulation_ex();
+    linkedList_ex();
     return 0;
 }
