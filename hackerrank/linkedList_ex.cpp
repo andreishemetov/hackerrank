@@ -85,6 +85,27 @@ SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* llist, int position) {
         return llist;
 }
 
+void printList(SinglyLinkedListNode* llist) {
+    SinglyLinkedListNode *node = llist;
+    while (node) {
+        cout<< node->data <<endl;
+        node = node->next;
+    }
+}
+
+SinglyLinkedListNode* reverseList(SinglyLinkedListNode* llist) {
+    SinglyLinkedListNode *current = llist;
+    SinglyLinkedListNode *prev = nullptr;
+    while (current) {
+        SinglyLinkedListNode *next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    llist = prev;
+    return llist;
+}
+
 void linkedList_ex(){
     SinglyLinkedListNode *list = NULL;
     list = insertNodeAtTail(list, 1);
@@ -93,6 +114,8 @@ void linkedList_ex(){
     list = insertNodeAtTail(list, 4);
     list = insertNodeAtTail(list, 5);
     list = insertNodeAtHead(list, 0);
+    list = reverseList(list);
+    printList(list);
 }
 
 
