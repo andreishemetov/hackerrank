@@ -120,6 +120,38 @@ bool compare_lists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
     return !node1 && !node2;
 }
 
+SinglyLinkedListNode* mergeLists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
+    if (!head1) {
+        return head2;
+    } else if (!head2){
+        return head1;
+    }
+    
+    SinglyLinkedListNode* node1 = head1;
+    SinglyLinkedListNode* node2 = head2;
+    SinglyLinkedListNode *head = nullptr;
+    SinglyLinkedListNode *tail = nullptr;
+    while (node1 && node2) {
+        SinglyLinkedListNode *node;
+        if (node1->data < node2->data){
+            node = node1;
+            node1 = node1->next;
+        } else {
+            node = node2;
+            node2 = node2->next;
+        }
+        if (tail == nullptr) {
+            tail = node;
+            head = tail;
+        } else {
+            tail->next = node;
+            tail = tail->next;
+        }
+    }
+    tail->next = node1 ? node1 : node2;
+    return head;
+}
+
 void linkedList_ex(){
     SinglyLinkedListNode *list = NULL;
     list = insertNodeAtTail(list, 1);
@@ -127,9 +159,19 @@ void linkedList_ex(){
     list = insertNodeAtTail(list, 3);
     list = insertNodeAtTail(list, 4);
     list = insertNodeAtTail(list, 5);
+    list = insertNodeAtTail(list, 6);
+    list = insertNodeAtTail(list, 16);
+    list = insertNodeAtTail(list, 26);
     list = insertNodeAtHead(list, 0);
-    list = reverseList(list);
-    printList(list);
+//    list = reverseList(list);
+//    printList(list);
+    
+    SinglyLinkedListNode *list2 = NULL;
+    list2 = insertNodeAtTail(list2, 1);
+    list2 = insertNodeAtTail(list2, 2);
+    list2 = insertNodeAtTail(list2, 5);
+    
+    mergeLists(list, list2);
 }
 
 
