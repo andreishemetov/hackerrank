@@ -152,6 +152,22 @@ SinglyLinkedListNode* mergeLists(SinglyLinkedListNode* head1, SinglyLinkedListNo
     return head;
 }
 
+int getNodeFromTailPosition(SinglyLinkedListNode* llist, int positionFromTail) {
+    SinglyLinkedListNode *node = llist;
+    SinglyLinkedListNode *temp = llist;
+    
+    int dist = 0;
+    
+    while (temp->next) {
+        temp = temp->next;
+        dist++;
+        if (dist>=positionFromTail+1){
+            node = node->next;
+        }
+    }
+    return  node->data;
+}
+
 void linkedList_ex(){
     SinglyLinkedListNode *list = NULL;
     list = insertNodeAtTail(list, 1);
@@ -160,8 +176,6 @@ void linkedList_ex(){
     list = insertNodeAtTail(list, 4);
     list = insertNodeAtTail(list, 5);
     list = insertNodeAtTail(list, 6);
-    list = insertNodeAtTail(list, 16);
-    list = insertNodeAtTail(list, 26);
     list = insertNodeAtHead(list, 0);
 //    list = reverseList(list);
 //    printList(list);
@@ -171,7 +185,7 @@ void linkedList_ex(){
     list2 = insertNodeAtTail(list2, 2);
     list2 = insertNodeAtTail(list2, 5);
     
-    mergeLists(list, list2);
+    int v = getNodeFromTailPosition(list, 2);
 }
 
 
