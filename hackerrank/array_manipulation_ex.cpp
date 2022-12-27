@@ -12,7 +12,7 @@
 using namespace std;
 
 
-long arrayManipulation(int n, vector<vector<int>> queries) {
+long arrayManipulationBruteForce(int n, vector<vector<int>> queries) {
     long maxEl = 0;
     vector<long> arr(n, 0);
     for (int q = 0; q < queries.size(); q++){
@@ -27,6 +27,27 @@ long arrayManipulation(int n, vector<vector<int>> queries) {
     return maxEl;
 }
 
+//https://www.youtube.com/watch?v=hDhf04AJIRs&ab_channel=JAVAAID-CodingInterviewPreparation
+long arrayManipulationOptimal(int n, vector<vector<int>> queries) {
+    vector<long> arr(n+2, 0);
+    for (int q = 0; q < queries.size(); q++){
+        int b = queries[q][0];
+        int e = queries[q][1];
+        int value = queries[q][2];
+        arr[b] += value;
+        arr[e+1] -= value;
+    }
+    
+    // get max
+    long maxEl = LONG_MIN;
+    long sum = 0;
+    for (int i=0; i<arr.size(); i++){
+        sum += arr[i];
+        maxEl = max(maxEl, sum);
+    }
+    return maxEl;
+}
+
 void array_manipulation_ex(){
     cout << "array_manipulation_ex\n";
     int n = 5;
@@ -35,7 +56,7 @@ void array_manipulation_ex(){
         {2,5,100},
         {3,4,100}
     };
-    long calcResult = arrayManipulation(n, queries);
+    long calcResult = arrayManipulationOptimal(n, queries);
     long expResult = 200;
     string result = calcResult == expResult ? "SUCCESS" : "FAILURE";
     cout <<">> Test "<<result<<endl;
