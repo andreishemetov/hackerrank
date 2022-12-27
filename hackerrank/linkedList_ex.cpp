@@ -168,6 +168,21 @@ int getNodeFromTailPosition(SinglyLinkedListNode* llist, int positionFromTail) {
     return  node->data;
 }
 
+SinglyLinkedListNode* removeDuplicates(SinglyLinkedListNode* llist) {
+    SinglyLinkedListNode *node = llist;
+    SinglyLinkedListNode *head = node;
+    SinglyLinkedListNode *temp = node;
+    while (temp) {
+        if (node->data != temp->data){
+            node->next = temp;
+            node = node->next;
+        }
+        temp = temp->next;
+    }
+    node->next = nullptr;
+    return head;
+}
+
 void linkedList_ex(){
     SinglyLinkedListNode *list = NULL;
     list = insertNodeAtTail(list, 1);
