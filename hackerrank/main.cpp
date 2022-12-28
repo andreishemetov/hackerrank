@@ -19,6 +19,7 @@
 #include "sparse_arrays_ex.hpp"
 #include "array_manipulation_ex.hpp"
 #include "linkedList_ex.hpp"
+#include "tree_ex.hpp"
 
 using namespace std;
 
@@ -39,6 +40,7 @@ int main(int argc, const char * argv[]) {
 //    hourglassSum_ex();
 //    sparse_arrays_ex();
 //    array_manipulation_ex();
-    linkedList_ex();
+//    linkedList_ex();
+    tree_ex();
     return 0;
 }
