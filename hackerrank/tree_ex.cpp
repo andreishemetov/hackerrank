@@ -26,14 +26,36 @@ public:
     }
 };
 
-void printNode(Node *node){
+void prePrintNode(Node *node){
     cout<<node->data<<" ";
-    if (node->left) printNode(node->left);
-    if (node->right) printNode(node->right);
+    if (node->left) prePrintNode(node->left);
+    if (node->right) prePrintNode(node->right);
+}
+
+void postPrintNode(Node *node){
+    if (node->left) postPrintNode(node->left);
+    if (node->right) postPrintNode(node->right);
+    cout<<node->data<<" ";
+}
+
+void inPrintNode(Node *node){
+    if (node->left) inPrintNode(node->left);
+    cout<<node->data<<" ";
+    if (node->right) inPrintNode(node->right);
 }
 
 void preOrder(Node *root) {
-    printNode(root);
+    prePrintNode(root);
+    cout<<endl;
+}
+
+void postOrder(Node *root) {
+    postPrintNode(root);
+    cout<<endl;
+}
+
+void inOrder(Node *root) {
+    inPrintNode(root);
     cout<<endl;
 }
 
@@ -48,7 +70,7 @@ void tree_ex(){
     Node *nodeLeft = nodeRight->left;
     nodeLeft->right = new Node(4);
     
-    preOrder(node);
+    inOrder(node);
 }
 
 
