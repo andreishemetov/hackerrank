@@ -59,6 +59,36 @@ void inOrder(Node *root) {
     cout<<endl;
 }
 
+void dip(Node *node, int *height) {
+    int left = *height;
+    int right = *height;
+    if (node->right) {
+        right +=1;
+        dip(node->right, &right);
+    }
+    if (node->left) {
+        left += 1;
+        dip(node->left, &left);
+    };
+    *height = max(left, right);
+}
+
+int dip_optional(Node *node) {
+    if (!node || (!node->left && !node->right)){
+        return 0;
+    } else {
+        return 1+max(dip_optional(node->left), dip_optional(node->right));
+    }
+}
+
+int height(Node* root) {
+//    int height = 0;
+//    dip(root, &height);
+//    return height;
+    
+    return dip_optional(root);
+}
+
 void tree_ex(){
     Node *node = new Node(1);
     node->right = new Node(2);
@@ -70,7 +100,9 @@ void tree_ex(){
     Node *nodeLeft = nodeRight->left;
     nodeLeft->right = new Node(4);
     
-    inOrder(node);
+//    inOrder(node);
+    int h = height(node);
+    
 }
 
 
