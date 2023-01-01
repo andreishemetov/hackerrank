@@ -10,6 +10,7 @@
 #include <vector>
 #include <algorithm>
 #include <new>
+#include <queue>
 
 using namespace std;
 
@@ -59,34 +60,55 @@ void inOrder(Node *root) {
     cout<<endl;
 }
 
-void dip(Node *node, int *height) {
+void height_calculate(Node *node, int *height) {
     int left = *height;
     int right = *height;
     if (node->right) {
         right +=1;
-        dip(node->right, &right);
+        height_calculate(node->right, &right);
     }
     if (node->left) {
         left += 1;
-        dip(node->left, &left);
+        height_calculate(node->left, &left);
     };
     *height = max(left, right);
 }
 
-int dip_optional(Node *node) {
+int height(Node* node) {
+//    int height = 0;
+//    height_calculate(node, &height);
+//    return height;
+    
     if (!node || (!node->left && !node->right)){
         return 0;
     } else {
-        return 1+max(dip_optional(node->left), dip_optional(node->right));
+        return 1+max(height(node->left), height(node->right));
     }
 }
 
-int height(Node* root) {
-//    int height = 0;
-//    dip(root, &height);
-//    return height;
-    
-    return dip_optional(root);
+void printLevelOrder(Node* node){
+    vector<vector<int>> data = {{node->data}};
+    cout<<node->data<<" ";
+    vector<Node*> nodes = {node};
+    while (!nodes.empty()) {
+        vector<Node*> newNodes;
+        vector<int> newData;
+        for (int i=0; i<nodes.size(); i++){
+            if (nodes[i]->left) {
+                newNodes.push_back(nodes[i]->left);
+                newData.push_back(nodes[i]->left->data);
+                cout<<nodes[i]->left->data<<" ";
+            }
+            if (nodes[i]->right) {
+                newNodes.push_back(nodes[i]->right);
+                newData.push_back(nodes[i]->right->data);
+                cout<<nodes[i]->right->data<<" ";
+            }
+        }
+        nodes = newNodes;
+        data.push_back(newData);
+    }
+    cout<<endl;    
 }
 
 void tree_ex(){
@@ -101,7 +123,8 @@ void tree_ex(){
     nodeLeft->right = new Node(4);
     
 //    inOrder(node);
-    int h = height(node);
+//    int h = height(node);
+    printLevelOrder(node);
     
 }
 
