@@ -75,9 +75,9 @@ void height_calculate(Node *node, int *height) {
 }
 
 int height(Node* node) {
-//    int height = 0;
-//    height_calculate(node, &height);
-//    return height;
+    //    int height = 0;
+    //    height_calculate(node, &height);
+    //    return height;
     
     if (!node || (!node->left && !node->right)){
         return 0;
@@ -108,23 +108,33 @@ void printLevelOrder(Node* node){
         nodes = newNodes;
         data.push_back(newData);
     }
-    cout<<endl;    
+    cout<<endl;
+}
+
+Node* insert(Node* root, int data) {
+    if (root == NULL) {
+        return new Node(data);
+    }
+    if (data > root->data) {
+        root->right = insert(root->right, data);
+    } else {
+        root->left = insert(root->left, data);
+    }
+    return root;
 }
 
 void tree_ex(){
-    Node *node = new Node(1);
-    node->right = new Node(2);
-    Node *nodeRight = node->right;
-    nodeRight->right = new Node(5);
-    nodeRight = nodeRight->right;
-    nodeRight->right = new Node(6);
-    nodeRight->left = new Node(3);
-    Node *nodeLeft = nodeRight->left;
-    nodeLeft->right = new Node(4);
+    Node *node = new Node(4);
+    node->left = new Node(2);
+    node->right = new Node(7);
+    Node *nodeLeft = node->left;
+    nodeLeft->right = new Node(3);
+    nodeLeft->left = new Node(1);
     
-//    inOrder(node);
-//    int h = height(node);
+    //    inOrder(node);
+    //    int h = height(node);
     printLevelOrder(node);
+    insert(node, 6);
     
 }
 
