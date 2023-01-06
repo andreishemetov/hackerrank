@@ -183,6 +183,18 @@ SinglyLinkedListNode* removeDuplicates(SinglyLinkedListNode* llist) {
     return head;
 }
 
+bool has_cycle(SinglyLinkedListNode* head) {
+    if (head == nullptr) return false;
+    SinglyLinkedListNode *pointer = head;
+    SinglyLinkedListNode *fastPointer = head;
+    while (fastPointer != nullptr && fastPointer->next != nullptr) {
+        pointer = pointer->next;
+        fastPointer = fastPointer->next->next;
+        if (pointer == fastPointer) return true;
+    }
+    return false;
+}
+
 void linkedList_ex(){
     SinglyLinkedListNode *list = NULL;
     list = insertNodeAtTail(list, 1);
