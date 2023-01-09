@@ -9,5 +9,6 @@
 #define tree_ex_hpp
 
 void tree_ex();
+void tree_huffman_decoding_ex();
 
 #endif /* tree_ex_hpp */

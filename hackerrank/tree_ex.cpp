@@ -135,7 +135,57 @@ void tree_ex(){
     //    int h = height(node);
     printLevelOrder(node);
     insert(node, 6);
-    
 }
 
+
+class CharNode {
+public:
+    int freq;
+    char data;
+    CharNode *left;
+    CharNode *right;
+    CharNode(char d, int f) {
+        data = d;
+        freq = f;
+        left = NULL;
+        right = NULL;
+    }
+};
+
+
+string huffman_decode_huff(CharNode *root, string s) {
+    string result = "";
+    CharNode *node = root;
+    for (int i=0; i<s.length(); i++){
+        char c = s[i];
+        if (c == '0' && node->left) {
+            node = node->left;
+        } else if (node->right) {
+            node = node->right;
+        }
+        if (node->data){
+            result += node->data;
+            node = root;
+        }
+    }
+    return result;
+}
+
+void tree_huffman_decoding_ex(){
+    cout << "tree_huffman_decoding_ex\n";
+    
+    CharNode *node = new CharNode(NULL, 5);
+    node->left = new CharNode(NULL, 2);
+    node->right = new CharNode('A', 3);
+    CharNode *nodeLeft = node->left;
+    nodeLeft->right = new CharNode('C', 1);
+    nodeLeft->left = new CharNode('B', 1);
+    
+    string input = "1001011";
+    string calcResult = huffman_decode_huff(node, input);
+    string expResult = "ABACA";
+    string result = calcResult == expResult ? "SUCCESS" : "FAILURE";
+    cout <<"calcResult:"<<calcResult<<" expResult:"<<expResult<<" >> Test "<<result<<endl;
+    cout<<endl;
+}
 
