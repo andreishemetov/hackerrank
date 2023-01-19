@@ -215,4 +215,58 @@ void linkedList_ex(){
     int v = getNodeFromTailPosition(list, 2);
 }
 
+class DoublyLinkedListNode {
+public:
+    int data;
+    DoublyLinkedListNode* next = NULL;
+    DoublyLinkedListNode* prev = NULL;
+    
+    DoublyLinkedListNode(int data) {
+        this->data = data;
+    }
+    
+    DoublyLinkedListNode(int data, DoublyLinkedListNode* next, DoublyLinkedListNode* prev) {
+        this->data = data;
+        this->next = next;
+        this->prev = prev;
+    }
+    
+};
 
+DoublyLinkedListNode* sortedInsert(DoublyLinkedListNode* llist, int data) {
+    if (llist->data > data) {
+        DoublyLinkedListNode *root = new DoublyLinkedListNode(data, llist, NULL);
+        llist->prev = root;
+        return root;
+    }
+    
+    DoublyLinkedListNode *node = llist;
+    while (node->next != NULL && node->next->data < data) {
+        node = node->next;
+    }
+    
+    DoublyLinkedListNode *newNode = new DoublyLinkedListNode(data, node->next, node);
+    if (node->next != NULL){
+        node->next->prev = newNode;
+    }    
+    node->next = newNode;
+    
+    return llist;
+}
+
+
+void doublyLinkedList_ex(){
+    DoublyLinkedListNode *sortedList = new DoublyLinkedListNode(1);
+    DoublyLinkedListNode *node = sortedList;
+    DoublyLinkedListNode *nextNode = new DoublyLinkedListNode(3, NULL, node);
+    node->next = nextNode;
+    node = nextNode;
+    nextNode = new DoublyLinkedListNode(4, NULL, node);
+    node->next = nextNode;
+    node = nextNode;
+    nextNode = new DoublyLinkedListNode(10, NULL, node);
+    node->next = nextNode;
+    
+    sortedList = sortedInsert(sortedList, 11);
+    
+}
