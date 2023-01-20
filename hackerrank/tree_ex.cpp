@@ -123,18 +123,55 @@ Node* insert(Node* root, int data) {
     return root;
 }
 
+Node *lca(Node *root, int v1, int v2) {
+    
+    // best solution (recurcive)
+    if (root == NULL)
+        return NULL;
+    
+    // If both n1 and n2 are smaller
+    // than root, then LCA lies in left
+    if (root->data > v1 && root->data > v2)
+        return lca(root->left, v1, v2);
+    
+    // If both n1 and n2 are greater than
+    // root, then LCA lies in right
+    if (root->data < v1 && root->data < v2)
+        return lca(root->right, v1, v2);
+    
+    return root;
+    
+    /* my solution
+     Node *node = root;
+     while (node) {
+     if (node->data > v1 && node->data > v2 && node->left != NULL) {
+     node = node->left;
+     } else if (node->data < v1 && node->data < v2 && node->right != NULL) {
+     node = node->right;
+     } else {
+     return node;
+     }
+     
+     }
+     return root;
+     */
+}
+
+
 void tree_ex(){
     Node *node = new Node(4);
     node->left = new Node(2);
     node->right = new Node(7);
+    node->right->left = new Node(6);
     Node *nodeLeft = node->left;
     nodeLeft->right = new Node(3);
     nodeLeft->left = new Node(1);
     
     //    inOrder(node);
     //    int h = height(node);
-    printLevelOrder(node);
-    insert(node, 6);
+    //    printLevelOrder(node);
+    //    insert(node, 6);
+    Node* reuslt = lca(node, 1, 7);
 }
 
 
