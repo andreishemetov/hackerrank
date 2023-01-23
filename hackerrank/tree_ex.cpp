@@ -39,10 +39,11 @@ void postPrintNode(Node *node){
     cout<<node->data<<" ";
 }
 
-void inPrintNode(Node *node){
-    if (node->left) inPrintNode(node->left);
+void inPrintNode(Node *node, vector<int> *values){
+    if (node->left) inPrintNode(node->left, values);
+    values->push_back(node->data);
     cout<<node->data<<" ";
-    if (node->right) inPrintNode(node->right);
+    if (node->right) inPrintNode(node->right, values);
 }
 
 void preOrder(Node *root) {
@@ -55,9 +56,11 @@ void postOrder(Node *root) {
     cout<<endl;
 }
 
-void inOrder(Node *root) {
-    inPrintNode(root);
+vector<int>* inOrder(Node *root) {
+    vector<int> *values = new vector<int>();
+    inPrintNode(root, values);
     cout<<endl;
+    return values;
 }
 
 void height_calculate(Node *node, int *height) {
@@ -157,6 +160,80 @@ Node *lca(Node *root, int v1, int v2) {
      */
 }
 
+Node* buildTree(vector<vector<int>> indexes){
+    Node *root = new Node(1);
+    vector<Node*> levelNodes = {root};
+    
+    vector<Node*> newLevelNodes = vector<Node*>();
+    for (int i=0; i<indexes.size(); i++){
+        if (levelNodes.empty() && !newLevelNodes.empty()) {
+            levelNodes = newLevelNodes;
+            newLevelNodes = vector<Node*>();
+        }
+        Node* node = levelNodes[0];
+        levelNodes.erase(levelNodes.begin());
+        if (indexes[i][0] != -1) {
+            Node* left = new Node(indexes[i][0]);
+            node->left = left;
+            newLevelNodes.push_back(left);
+        }
+        if (indexes[i][1] != -1) {
+            Node* right = new Node(indexes[i][1]);
+            node->right = right;
+            newLevelNodes.push_back(right);
+        }
+    }
+    
+    return root;
+}
+
+void swap(Node *node) {
+    Node *temp = node->left;
+    node->left = node->right;
+    node->right = temp;
+}
+
+void swapChildsAndGo(Node *node, int level, int query) {
+    if (level % query == 0) {
+        swap(node);
+    }
+    if (node->left != NULL) {
+        swapChildsAndGo(node->left, level+1, query);
+    }
+    if (node->right != NULL) {
+        swapChildsAndGo(node->right, level+1, query);
+    }
+}
+
+vector<vector<int>> swapNodes(vector<vector<int>> indexes, vector<int> queries) {
+    Node *root = buildTree(indexes);
+    vector<vector<int>> result = {};
+    for (int i=0; i<queries.size(); i++) {
+        swapChildsAndGo(root, 1, queries[i]);
+        result.push_back(*inOrder(root));
+    }
+    return result;
+}
+
+void swapNodes_ex() {
+    vector<vector<int>> indexes = {
+        {2,3},
+        {4,-1}, {5,-1},
+        {6,-1}, {7,8},
+        {-1,9}, {-1,-1}, {10,11},
+        {-1,-1}, {-1,-1}, {-1,-1}
+    };
+    vector<int> queries = {2,4};
+    
+    vector<vector<int>> calcResult = swapNodes(indexes, queries);
+    vector<vector<int>> expResult = {
+        {2,9,6,4,1,3,7,5,11,8,10},
+        {2,6,9,4,1,3,7,5,10,8,11}
+    };
+    string result = calcResult == expResult ? "SUCCESS" : "FAILURE";
+    cout <<">> Test "<<result<<endl;
+    cout<<endl;
+}
 
 void tree_ex(){
     Node *node = new Node(4);
@@ -171,7 +248,11 @@ void tree_ex(){
     //    int h = height(node);
     //    printLevelOrder(node);
     //    insert(node, 6);
-    Node* reuslt = lca(node, 1, 7);
+//  Node* reuslt = lca(node, 1, 7);
+    
+    swapNodes_ex();
+    
+    
 }
 
 
