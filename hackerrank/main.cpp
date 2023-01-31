@@ -20,6 +20,7 @@
 #include "array_manipulation_ex.hpp"
 #include "linkedList_ex.hpp"
 #include "tree_ex.hpp"
+#include "stack_ex.hpp"
 
 using namespace std;
 
@@ -41,8 +42,9 @@ int main(int argc, const char * argv[]) {
 //    sparse_arrays_ex();
 //    array_manipulation_ex();
 //    linkedList_ex();
-    doublyLinkedList_ex();
+//    doublyLinkedList_ex();
 //    tree_ex();
 //    tree_huffman_decoding_ex();
+    stack_ex();
     return 0;
 }

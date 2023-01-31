@@ -11,6 +11,7 @@
 		1F1BD3E32922803D00EB0B7C /* recursiveDigitSum_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BD3E12922803D00EB0B7C /* recursiveDigitSum_ex.cpp */; };
 		1F662085291E471300A6C45D /* primeDates_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F662083291E471300A6C45D /* primeDates_ex.cpp */; };
 		1FC6B6832913A8440090AB83 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FC6B6822913A8440090AB83 /* main.cpp */; };
+		1FD08EB129897BA00096659E /* stack_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD08EAF29897BA00096659E /* stack_ex.cpp */; };
 		1FD5B1EA291AAC0700A14D0E /* caesarCipher_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5B1E8291AAC0700A14D0E /* caesarCipher_ex.cpp */; };
 		1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */; };
 		7582434C2957226700E97A4B /* array_manipulation_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 758243472957226700E97A4B /* array_manipulation_ex.cpp */; };
@@ -45,6 +46,8 @@
 		1F662084291E471300A6C45D /* primeDates_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = primeDates_ex.hpp; sourceTree = "<group>"; };
 		1FC6B67F2913A8440090AB83 /* hackerrank */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hackerrank; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC6B6822913A8440090AB83 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1FD08EAF29897BA00096659E /* stack_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stack_ex.cpp; sourceTree = "<group>"; };
+		1FD08EB029897BA00096659E /* stack_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stack_ex.hpp; sourceTree = "<group>"; };
 		1FD5B1E8291AAC0700A14D0E /* caesarCipher_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = caesarCipher_ex.cpp; sourceTree = "<group>"; };
 		1FD5B1E9291AAC0700A14D0E /* caesarCipher_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = caesarCipher_ex.hpp; sourceTree = "<group>"; };
 		1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = maxMin_ex.cpp; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 		1FC6B6812913A8440090AB83 /* hackerrank */ = {
 			isa = PBXGroup;
 			children = (
+				1FD08EAF29897BA00096659E /* stack_ex.cpp */,
+				1FD08EB029897BA00096659E /* stack_ex.hpp */,
 				1F1A8638295CB6BD003E5F1E /* tree_ex.cpp */,
 				1F1A8637295CB6BD003E5F1E /* tree_ex.hpp */,
 				758243472957226700E97A4B /* array_manipulation_ex.cpp */,
@@ -204,6 +209,7 @@
 				1F1BD3E32922803D00EB0B7C /* recursiveDigitSum_ex.cpp in Sources */,
 				1FD5B1EA291AAC0700A14D0E /* caesarCipher_ex.cpp in Sources */,
 				7582434D2957226700E97A4B /* reverseArray_ex.cpp in Sources */,
+				1FD08EB129897BA00096659E /* stack_ex.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
