@@ -41,8 +41,8 @@ int main(int argc, const char * argv[]) {
 //    sparse_arrays_ex();
 //    array_manipulation_ex();
 //    linkedList_ex();
-//    doublyLinkedList_ex();
-    tree_ex();
+    doublyLinkedList_ex();
+//    tree_ex();
 //    tree_huffman_decoding_ex();
     return 0;
 }

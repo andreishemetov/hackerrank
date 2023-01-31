@@ -254,6 +254,20 @@ DoublyLinkedListNode* sortedInsert(DoublyLinkedListNode* llist, int data) {
     return llist;
 }
 
+DoublyLinkedListNode* reverse(DoublyLinkedListNode* llist) {
+    DoublyLinkedListNode *node = llist;
+    while (1) {
+        DoublyLinkedListNode *temp = node->next;
+        node->next = node->prev;
+        node->prev = temp;
+        if (temp == NULL){
+            break;
+        }
+        node = temp;
+    }
+    return node;
+}
+
 
 void doublyLinkedList_ex(){
     DoublyLinkedListNode *sortedList = new DoublyLinkedListNode(1);
@@ -267,6 +281,6 @@ void doublyLinkedList_ex(){
     nextNode = new DoublyLinkedListNode(10, NULL, node);
     node->next = nextNode;
     
-    sortedList = sortedInsert(sortedList, 11);
-    
+//    sortedList = sortedInsert(sortedList, 11);
+    DoublyLinkedListNode *reversedList = reverse(sortedList);
 }
