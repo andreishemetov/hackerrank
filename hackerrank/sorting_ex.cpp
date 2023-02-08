@@ -26,9 +26,24 @@ void bubbleSort(int *arr, int size){
     }
 }
 
+void insertionSort(int *arr, int size){
+    int j = 0;
+    for (int i=1; i<size; i++){
+        j = i;
+        while (j>0 && arr[j]<arr[j-1]) {
+            int temp = arr[j-1];
+            arr[j-1] = arr[j];
+            arr[j] = temp;
+            j--;
+        }
+    }
+}
+
+
+// https://tproger.ru/articles/zachem-nuzhny-algoritmy-sortirovki/
 void sorting_ex(){
     const int sz = 10;
     int arr[sz] = {52,45,32,64,12,87,78,98,23,7};
-    bubbleSort(arr, sz);
+//    bubbleSort(arr, sz);
+    insertionSort(arr, sz);
 }
-//int [] intArray = new int [] {52,45,32,64,12,87,78,98,23,7};
