@@ -14,6 +14,7 @@
 		1FD08EB129897BA00096659E /* stack_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD08EAF29897BA00096659E /* stack_ex.cpp */; };
 		1FD5B1EA291AAC0700A14D0E /* caesarCipher_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5B1E8291AAC0700A14D0E /* caesarCipher_ex.cpp */; };
 		1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */; };
+		757D78AB29941B6C00EFD1A8 /* sorting_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 757D78A929941B6C00EFD1A8 /* sorting_ex.cpp */; };
 		7582434C2957226700E97A4B /* array_manipulation_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 758243472957226700E97A4B /* array_manipulation_ex.cpp */; };
 		7582434D2957226700E97A4B /* reverseArray_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 758243482957226700E97A4B /* reverseArray_ex.cpp */; };
 		7582434E2957226700E97A4B /* sparse_arrays_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 758243492957226700E97A4B /* sparse_arrays_ex.cpp */; };
@@ -52,6 +53,8 @@
 		1FD5B1E9291AAC0700A14D0E /* caesarCipher_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = caesarCipher_ex.hpp; sourceTree = "<group>"; };
 		1FD5B1EB291AB1B000A14D0E /* maxMin_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = maxMin_ex.cpp; sourceTree = "<group>"; };
 		1FD5B1EC291AB1B000A14D0E /* maxMin_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = maxMin_ex.hpp; sourceTree = "<group>"; };
+		757D78A929941B6C00EFD1A8 /* sorting_ex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sorting_ex.cpp; sourceTree = "<group>"; };
+		757D78AA29941B6C00EFD1A8 /* sorting_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sorting_ex.hpp; sourceTree = "<group>"; };
 		758243442957226700E97A4B /* reverseArray_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reverseArray_ex.hpp; sourceTree = "<group>"; };
 		758243452957226700E97A4B /* hourglassSum_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = hourglassSum_ex.hpp; sourceTree = "<group>"; };
 		758243462957226700E97A4B /* array_manipulation_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = array_manipulation_ex.hpp; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 		1FC6B6812913A8440090AB83 /* hackerrank */ = {
 			isa = PBXGroup;
 			children = (
+				757D78A929941B6C00EFD1A8 /* sorting_ex.cpp */,
+				757D78AA29941B6C00EFD1A8 /* sorting_ex.hpp */,
 				1FD08EAF29897BA00096659E /* stack_ex.cpp */,
 				1FD08EB029897BA00096659E /* stack_ex.hpp */,
 				1F1A8638295CB6BD003E5F1E /* tree_ex.cpp */,
@@ -207,6 +212,7 @@
 				1F1A8639295CB6BD003E5F1E /* tree_ex.cpp in Sources */,
 				7582434E2957226700E97A4B /* sparse_arrays_ex.cpp in Sources */,
 				1F1BD3E32922803D00EB0B7C /* recursiveDigitSum_ex.cpp in Sources */,
+				757D78AB29941B6C00EFD1A8 /* sorting_ex.cpp in Sources */,
 				1FD5B1EA291AAC0700A14D0E /* caesarCipher_ex.cpp in Sources */,
 				7582434D2957226700E97A4B /* reverseArray_ex.cpp in Sources */,
 				1FD08EB129897BA00096659E /* stack_ex.cpp in Sources */,
