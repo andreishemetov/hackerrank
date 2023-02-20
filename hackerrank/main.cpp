@@ -46,7 +46,7 @@ int main(int argc, const char * argv[]) {
 //    doublyLinkedList_ex();
 //    tree_ex();
 //    tree_huffman_decoding_ex();
-//    stack_ex();
-    sorting_ex();
+    stack_ex();
+//    sorting_ex();
     return 0;
 }

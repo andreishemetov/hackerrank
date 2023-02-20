@@ -13,10 +13,16 @@
 
 using namespace std;
 
+bool isBalancedPair(char left, char right){
+    return ((left == '(' && right == ')') ||
+            (left == '{' && right == '}') ||
+            (left == '[' && right == ']'));
+}
+
 string isBalanced(string s) {
     stack<char> box;
     for(int i=0; i<s.size(); i++){
-        if (box.empty() || box.top() != s[i]){
+        if (box.empty() || !isBalancedPair(box.top(), s[i])){
             box.push(s[i]);
         } else {
             box.pop();
@@ -26,6 +32,6 @@ string isBalanced(string s) {
 }
 
 void stack_ex(){
-    string s = "{[()]}";
+    string s = "{[{()]}";
     string result = isBalanced(s);
 }
