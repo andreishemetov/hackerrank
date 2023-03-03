@@ -10,6 +10,7 @@
 #include <vector>
 #include <algorithm>
 #include <stack>
+#include <deque>
 
 using namespace std;
 
@@ -64,15 +65,22 @@ int equalStacks(vector<int> h1, vector<int> h2, vector<int> h3) {
     return  0;
 }
 
+vector<int> waiter(vector<int> number, int q) {
+    stack<int> m_stack(deque<int>(number.begin(), number.end()));
+    return  number;
 
+}
 
 void stack_ex(){
 //    string s = "{[{()]}";
 //    string result = isBalanced(s);
     
-    vector<int> h1 = {3,2,1,1,1};
-    vector<int> h2 = {4,3,2};
-    vector<int> h3 = {1,1,4,1};
+//    vector<int> h1 = {3,2,1,1,1};
+//    vector<int> h2 = {4,3,2};
+//    vector<int> h3 = {1,1,4,1};
+//    int h = equalStacks(h1, h2, h3);
     
-    int h = equalStacks(h1, h2, h3);
+    vector<int> v = {2,3,4,5,6,7};
+    int q = 3;
+    waiter(v, q);
 }
