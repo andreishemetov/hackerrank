@@ -65,22 +65,63 @@ int equalStacks(vector<int> h1, vector<int> h2, vector<int> h3) {
     return  0;
 }
 
+bool isPrimeNumber(int n){
+    for(int i = 2; i < n; i++){
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
 vector<int> waiter(vector<int> number, int q) {
-    stack<int> m_stack(deque<int>(number.begin(), number.end()));
-    return  number;
+    vector<int> answers;
+    std::reverse(number.begin(), number.end());
+    stack<int> numbers(deque<int>(number.begin(), number.end()));
+    stack<int> draft = numbers;
+    
+    int n = 2;
+    int i = 0;
+    while (i < q) {
+        if (isPrimeNumber(n)){
+            draft = numbers;
+            numbers = stack<int>();
+            while (!draft.empty()){
+                int value = draft.top();
+                if (value % n == 0) {
+                    answers.insert(answers.end(), value);
+                } else {
+                    numbers.push(value);
+                }
+                draft.pop();
+            }
+            i++;
+        }
+        n++;
+    }
+    
+    unsigned long end = answers.size();
+    while (!numbers.empty()){
+        answers.insert(answers.begin() + end, numbers.top());
+        numbers.pop();
+    }
+    
+    return  answers;
 
 }
 
 void stack_ex(){
+//    isBalanced
 //    string s = "{[{()]}";
 //    string result = isBalanced(s);
-    
+
+//    equalStacks
 //    vector<int> h1 = {3,2,1,1,1};
 //    vector<int> h2 = {4,3,2};
 //    vector<int> h3 = {1,1,4,1};
 //    int h = equalStacks(h1, h2, h3);
     
-    vector<int> v = {2,3,4,5,6,7};
-    int q = 3;
-    waiter(v, q);
+//    waiter
+//    vector<int> v = {2,3,4,5,6,7}; int q = 3; // result {2,4,6,3,5,7}
+//    vector<int> v = {3,4,7,6,5}; int q = 1; // result {4,6,3,7,5}
+//    vector<int> v = {3,3,4,4,9}; int q = 2; // result {4,4,9,3,3}
+//    waiter(v, q);
 }
