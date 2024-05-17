@@ -22,6 +22,7 @@
 #include "tree_ex.hpp"
 #include "stack_ex.hpp"
 #include "sorting_ex.hpp"
+#include "strings_func_ex.hpp"
 
 using namespace std;
 
@@ -46,7 +47,10 @@ int main(int argc, const char * argv[]) {
 //    doublyLinkedList_ex();
 //    tree_ex();
 //    tree_huffman_decoding_ex();
-    stack_ex();
+//    stack_ex();
 //    sorting_ex();
+//    superReducedString_ex();
+//    camelcase_ex();
+    strongPassword_ex();
     return 0;
 }

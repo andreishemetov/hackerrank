@@ -24,6 +24,7 @@
 		75E2DDD2291D1F0700574975 /* gridChallenge_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD0291D1F0700574975 /* gridChallenge_ex.cpp */; };
 		75E2DDD5292FDB8C00574975 /* sumVsXor_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD3292FDB8C00574975 /* sumVsXor_ex.cpp */; };
 		75E2DDD8292FF5B400574975 /* bomberman_Game_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD6292FF5B400574975 /* bomberman_Game_ex.cpp */; };
+		FD9631742BF74DA400194C60 /* strings_func_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD9631722BF74DA400194C60 /* strings_func_ex.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +74,8 @@
 		75E2DDD4292FDB8C00574975 /* sumVsXor_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sumVsXor_ex.hpp; sourceTree = "<group>"; };
 		75E2DDD6292FF5B400574975 /* bomberman_Game_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bomberman_Game_ex.cpp; sourceTree = "<group>"; };
 		75E2DDD7292FF5B400574975 /* bomberman_Game_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = bomberman_Game_ex.hpp; sourceTree = "<group>"; };
+		FD9631722BF74DA400194C60 /* strings_func_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = strings_func_ex.cpp; sourceTree = "<group>"; };
+		FD9631732BF74DA400194C60 /* strings_func_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = strings_func_ex.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 		1FC6B6812913A8440090AB83 /* hackerrank */ = {
 			isa = PBXGroup;
 			children = (
+				FD9631712BF74D5E00194C60 /* strings */,
 				757D78A929941B6C00EFD1A8 /* sorting_ex.cpp */,
 				757D78AA29941B6C00EFD1A8 /* sorting_ex.hpp */,
 				1FD08EAF29897BA00096659E /* stack_ex.cpp */,
@@ -140,6 +144,15 @@
 				7582435129588F7C00E97A4B /* linkedList_ex.hpp */,
 			);
 			path = hackerrank;
+			sourceTree = "<group>";
+		};
+		FD9631712BF74D5E00194C60 /* strings */ = {
+			isa = PBXGroup;
+			children = (
+				FD9631722BF74DA400194C60 /* strings_func_ex.cpp */,
+				FD9631732BF74DA400194C60 /* strings_func_ex.hpp */,
+			);
+			path = strings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +215,7 @@
 				75E2DDD8292FF5B400574975 /* bomberman_Game_ex.cpp in Sources */,
 				7582434C2957226700E97A4B /* array_manipulation_ex.cpp in Sources */,
 				7593380D291C9D2A00846DBE /* dynamicArray_ex.cpp in Sources */,
+				FD9631742BF74DA400194C60 /* strings_func_ex.cpp in Sources */,
 				7582435229588F7C00E97A4B /* linkedList_ex.cpp in Sources */,
 				7582434F2957226700E97A4B /* hourglassSum_ex.cpp in Sources */,
 				1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */,
