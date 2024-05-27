@@ -12,30 +12,23 @@ using namespace std;
 
 
 string caesarCipher(string s, int k) {
-    for (int i=0; i < s.length(); i++){
-        char start = 'A';
-        char end = 'Z';
-        char l = s[i];
-        int d = k % 26;
-        if (l >= start && l <= end) {
-            int nl = l+d;
-            if (nl-end >0) {
-                s[i]=start+nl-end-1;
-            }  else {
-                s[i] = nl;
-            }
-        }
-        start = 'a';
-        end = 'z';
-        if (l >= start && l <= end) {
-            int nl = l+d;
-            if (nl-end >0) {
-                s[i]=start+nl-end-1;
-            }  else {
-                s[i] = nl;
-            }
+    char b2 = 'a';
+    char e2 = 'z';
+    char b1 = 'A';
+    char e1 = 'Z';
+    
+    printf("%d %d %d %d\n", b1, e1, b2, e2);
+    
+    for (int i=0; i<s.size(); i++){
+        if (s[i] >= b1 && s[i] <= e1) {
+            char c = (s[i] + k - b1) % (e1 - b1 + 1) + b1;
+            s[i] = c;
+        } else if (s[i] >= b2 && s[i] <= e2){
+            int c = (s[i] + k - b2) % (e2 - b2 + 1) + b2;
+            s[i] = char(c);
         }
     }
+    printf("%s\n",s.c_str());
     return s;
 }
 
