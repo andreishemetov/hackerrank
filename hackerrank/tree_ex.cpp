@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <new>
 #include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -235,6 +236,73 @@ void swapNodes_ex() {
     cout<<endl;
 }
 
+
+
+int calculateMaxSum(Node *node){
+    if (!node) {
+        return 0;
+    } else {
+        return node->data + max(calculateMaxSum(node->left), calculateMaxSum(node->right));
+    }
+}
+
+void bfs(Node *node){
+    vector<int> data;
+    queue<Node*> q;
+    q.push(node);
+    while (!q.empty()) {
+        Node *n = q.front();
+        data.push_back(n->data);
+        printf("%d ", n->data);
+        q.pop();
+        if (n->left){
+            q.push(n->left);
+        }
+        if (n->right){
+            q.push(n->right);
+        }
+    }
+}
+
+void dfs(Node *node){
+    vector<int> data;
+    stack<Node*> s;
+    s.push(node);
+    while (!s.empty()) {
+        Node *n = s.top();
+        printf("%d ", n->data);
+        s.pop();
+        if (n->right){
+            s.push(n->right);
+        }
+        if (n->left){
+            s.push(n->left);
+        }
+    }
+}
+
+int maxPathSumHelper(Node *node, int *answer){
+    if (!node){
+        return 0;
+    }
+    int leftMax = maxPathSumHelper(node->left, answer);
+    int rightMax = maxPathSumHelper(node->right, answer);
+    int maxSum = leftMax + rightMax + node->data;
+    if (maxSum > *answer){
+        *answer = maxSum;
+    }
+    return max(leftMax, rightMax) + node->data;
+}
+
+//https://www.youtube.com/watch?v=R4UHOLZ-bEk&ab_channel=%D0%A1%D0%B0%D1%88%D0%B0%D0%9B%D1%83%D0%BA%D0%B8%D0%BD
+void maxPathSum(Node *node){
+    int answer = 0;
+    maxPathSumHelper(node, &answer);
+    printf("maxPathSum answer = %d", answer);
+}
+
+
+
 void tree_ex(){
     Node *node = new Node(4);
     node->left = new Node(2);
@@ -243,6 +311,7 @@ void tree_ex(){
     Node *nodeLeft = node->left;
     nodeLeft->right = new Node(3);
     nodeLeft->left = new Node(1);
+    nodeLeft->right->left = new Node(2);
     
     //    inOrder(node);
     //    int h = height(node);
@@ -250,10 +319,18 @@ void tree_ex(){
     //    insert(node, 6);
 //  Node* reuslt = lca(node, 1, 7);
     
-    swapNodes_ex();
+//    swapNodes_ex();
+//    int s = calculateMaxSum(node);
+//    printf("s %d", s);
+    
+//    bfs(node);
+//    dfs(node);
+    maxPathSum(node);
     
     
 }
+
+
 
 
 class CharNode {

@@ -120,8 +120,8 @@ void stack_ex(){
 //    int h = equalStacks(h1, h2, h3);
     
 //    waiter
-//    vector<int> v = {2,3,4,5,6,7}; int q = 3; // result {2,4,6,3,5,7}
+    vector<int> v = {2,3,4,5,6,7}; int q = 3; // result {2,4,6,3,5,7}
 //    vector<int> v = {3,4,7,6,5}; int q = 1; // result {4,6,3,7,5}
 //    vector<int> v = {3,3,4,4,9}; int q = 2; // result {4,4,9,3,3}
-//    waiter(v, q);
+    waiter(v, q);
 }
