@@ -31,7 +31,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     cout << "Hello, HackerRank!\n";
-    caesarCipher_ex();
+//    caesarCipher_ex();
 //    maxMin_ex();
 //    dynamicArray_ex();
 //    gridChallenge_ex();
@@ -48,7 +48,7 @@ int main(int argc, const char * argv[]) {
 //    tree_ex();
 //    tree_huffman_decoding_ex();
 //   stack_ex();
-//    sorting_ex();
+    sorting_ex();
 //    superReducedString_ex();
 //    camelcase_ex();
 //    strongPassword_ex();
