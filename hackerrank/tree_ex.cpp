@@ -40,11 +40,16 @@ void postPrintNode(Node *node){
     cout<<node->data<<" ";
 }
 
-void inPrintNode(Node *node, vector<int> *values){
-    if (node->left) inPrintNode(node->left, values);
-    values->push_back(node->data);
+void inPrintNode(Node *node){
+    if (node->left) inPrintNode(node->left);
     cout<<node->data<<" ";
-    if (node->right) inPrintNode(node->right, values);
+    if (node->right) inPrintNode(node->right);
+}
+
+void inOrderValues(Node *node, vector<int> *values){
+    if (node->left) inOrderValues(node->left, values);
+    values->push_back(node->data);
+    if (node->right) inOrderValues(node->right, values);
 }
 
 void preOrder(Node *root) {
@@ -57,32 +62,12 @@ void postOrder(Node *root) {
     cout<<endl;
 }
 
-vector<int>* inOrder(Node *root) {
-    vector<int> *values = new vector<int>();
-    inPrintNode(root, values);
+void inOrder(Node *root) {
+    inPrintNode(root);
     cout<<endl;
-    return values;
-}
-
-void height_calculate(Node *node, int *height) {
-    int left = *height;
-    int right = *height;
-    if (node->right) {
-        right +=1;
-        height_calculate(node->right, &right);
-    }
-    if (node->left) {
-        left += 1;
-        height_calculate(node->left, &left);
-    };
-    *height = max(left, right);
 }
 
 int height(Node* node) {
-    //    int height = 0;
-    //    height_calculate(node, &height);
-    //    return height;
-    
     if (!node || (!node->left && !node->right)){
         return 0;
     } else {
@@ -210,8 +195,10 @@ vector<vector<int>> swapNodes(vector<vector<int>> indexes, vector<int> queries) 
     Node *root = buildTree(indexes);
     vector<vector<int>> result = {};
     for (int i=0; i<queries.size(); i++) {
+        vector<int> *values = new vector<int>();
         swapChildsAndGo(root, 1, queries[i]);
-        result.push_back(*inOrder(root));
+        inOrderValues(root, values);
+        result.push_back(*values);
     }
     return result;
 }
@@ -252,9 +239,9 @@ void bfs(Node *node){
     q.push(node);
     while (!q.empty()) {
         Node *n = q.front();
+        q.pop();
         data.push_back(n->data);
         printf("%d ", n->data);
-        q.pop();
         if (n->left){
             q.push(n->left);
         }
@@ -270,8 +257,8 @@ void dfs(Node *node){
     s.push(node);
     while (!s.empty()) {
         Node *n = s.top();
-        printf("%d ", n->data);
         s.pop();
+        printf("%d ", n->data);
         if (n->right){
             s.push(n->right);
         }
@@ -304,16 +291,24 @@ void maxPathSum(Node *node){
 
 
 void tree_ex(){
-    Node *node = new Node(4);
-    node->left = new Node(2);
-    node->right = new Node(7);
-    node->right->left = new Node(6);
-    Node *nodeLeft = node->left;
-    nodeLeft->right = new Node(3);
-    nodeLeft->left = new Node(1);
-    nodeLeft->right->left = new Node(2);
+//    Node *node = new Node(4);
+//    node->left = new Node(2);
+//    node->right = new Node(7);
+//    node->right->left = new Node(6);
+//    Node *nodeLeft = node->left;
+//    nodeLeft->right = new Node(3);
+//    nodeLeft->left = new Node(1);
+//    nodeLeft->right->left = new Node(2);
     
-    //    inOrder(node);
+    Node *node = new Node(1);
+    node->right = new Node(2);
+    node->right->right = new Node(5);
+    Node *nodeRight = node->right->right;
+    nodeRight->right = new Node(6);
+    nodeRight->left = new Node(3);
+    nodeRight->left->right = new Node(4);
+    
+    inOrder(node);
     //    int h = height(node);
     //    printLevelOrder(node);
     //    insert(node, 6);
@@ -325,7 +320,7 @@ void tree_ex(){
     
 //    bfs(node);
 //    dfs(node);
-    maxPathSum(node);
+//    maxPathSum(node);
     
     
 }

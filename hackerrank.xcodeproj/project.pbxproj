@@ -111,13 +111,12 @@
 		1FC6B6812913A8440090AB83 /* hackerrank */ = {
 			isa = PBXGroup;
 			children = (
+				FD1C08A72C07791400BA7C42 /* stack */,
 				FD1C08A32C0763FA00BA7C42 /* linkedList */,
 				FD1C08A12C075DD000BA7C42 /* array */,
 				FD9631712BF74D5E00194C60 /* strings */,
 				757D78A929941B6C00EFD1A8 /* sorting_ex.cpp */,
 				757D78AA29941B6C00EFD1A8 /* sorting_ex.hpp */,
-				1FD08EAF29897BA00096659E /* stack_ex.cpp */,
-				1FD08EB029897BA00096659E /* stack_ex.hpp */,
 				1F1A8638295CB6BD003E5F1E /* tree_ex.cpp */,
 				1F1A8637295CB6BD003E5F1E /* tree_ex.hpp */,
 				7582434A2957226700E97A4B /* hourglassSum_ex.cpp */,
@@ -165,6 +164,15 @@
 				FD1C08A52C07644100BA7C42 /* linkedList_ex.hpp */,
 			);
 			path = linkedList;
+			sourceTree = "<group>";
+		};
+		FD1C08A72C07791400BA7C42 /* stack */ = {
+			isa = PBXGroup;
+			children = (
+				1FD08EAF29897BA00096659E /* stack_ex.cpp */,
+				1FD08EB029897BA00096659E /* stack_ex.hpp */,
+			);
+			path = stack;
 			sourceTree = "<group>";
 		};
 		FD9631712BF74D5E00194C60 /* strings */ = {

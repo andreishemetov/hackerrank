@@ -11,5 +11,6 @@
 #include <stdio.h>
 
 void mergeTwoSortArrays_ex();
+void subarrayDivision_ex();
 
 #endif /* array_func_ex_hpp */

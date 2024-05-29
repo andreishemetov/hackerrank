@@ -8,6 +8,7 @@
 #include "array_func_ex.hpp"
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -56,5 +57,42 @@ void mergeTwoSortArrays_ex() {
     int m = 3;
     int n = 3;
     mergeTwoSortArrays(nums1, m, nums2, n);
+    cout<<endl;
+}
+
+/*
+ Two children, Lily and Ron, want to share a chocolate bar. Each of the squares has an integer on it.
+ 
+ Lily decides to share a contiguous segment of the bar selected such that:
+ 
+ The length of the segment matches Ron's birth month, and,
+ The sum of the integers on the squares is equal to his birth day.
+ Determine how many ways she can divide the chocolate.
+ 
+ Example
+ 
+ 
+ 
+ Lily wants to find segments summing to Ron's birth day,  with a length equalling his birth month, . In this case, there are two segments meeting her criteria:  and .
+ */
+
+int subarrayDivision(vector<int> s, int d, int m) {
+    int n = 0;
+    for(int i=0; i<=s.size() - m; i++){
+        long sum = 0;
+        for(int j=i; j<i+m; j++){
+            sum+=s[j];
+        }
+        if (sum == d) n++;
+    }
+    return n;
+}
+
+void subarrayDivision_ex() {
+    cout << "subarrayDivision_ex\n";
+    vector<int> v = {2,2,1,3,2};
+    int d = 4;
+    int m = 2;
+    int result = subarrayDivision(v, d, m);
     cout<<endl;
 }
