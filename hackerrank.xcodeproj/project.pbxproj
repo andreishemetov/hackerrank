@@ -26,6 +26,7 @@
 		FD1C08A22C075DD000BA7C42 /* array_func_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD1C089F2C075DD000BA7C42 /* array_func_ex.cpp */; };
 		FD1C08A62C07644100BA7C42 /* linkedList_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD1C08A42C07644100BA7C42 /* linkedList_ex.cpp */; };
 		FD9631742BF74DA400194C60 /* strings_func_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD9631722BF74DA400194C60 /* strings_func_ex.cpp */; };
+		FDBCED992C0A150400DFE62F /* transactionProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDBCED982C0A150400DFE62F /* transactionProcessor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +80,8 @@
 		FD1C08A52C07644100BA7C42 /* linkedList_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = linkedList_ex.hpp; sourceTree = "<group>"; };
 		FD9631722BF74DA400194C60 /* strings_func_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = strings_func_ex.cpp; sourceTree = "<group>"; };
 		FD9631732BF74DA400194C60 /* strings_func_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = strings_func_ex.hpp; sourceTree = "<group>"; };
+		FDBCED972C0A150400DFE62F /* transactionProcessor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = transactionProcessor.hpp; sourceTree = "<group>"; };
+		FDBCED982C0A150400DFE62F /* transactionProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = transactionProcessor.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 		1FC6B6812913A8440090AB83 /* hackerrank */ = {
 			isa = PBXGroup;
 			children = (
+				FDBCED982C0A150400DFE62F /* transactionProcessor.cpp */,
+				FDBCED972C0A150400DFE62F /* transactionProcessor.hpp */,
 				FD1C08A72C07791400BA7C42 /* stack */,
 				FD1C08A32C0763FA00BA7C42 /* linkedList */,
 				FD1C08A12C075DD000BA7C42 /* array */,
@@ -252,6 +257,7 @@
 				1FC6B6832913A8440090AB83 /* main.cpp in Sources */,
 				75E2DDD5292FDB8C00574975 /* sumVsXor_ex.cpp in Sources */,
 				75E2DDD2291D1F0700574975 /* gridChallenge_ex.cpp in Sources */,
+				FDBCED992C0A150400DFE62F /* transactionProcessor.cpp in Sources */,
 				1F662085291E471300A6C45D /* primeDates_ex.cpp in Sources */,
 				1F1A8639295CB6BD003E5F1E /* tree_ex.cpp in Sources */,
 				7582434E2957226700E97A4B /* sparse_arrays_ex.cpp in Sources */,
