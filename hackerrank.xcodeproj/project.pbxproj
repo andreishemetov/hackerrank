@@ -27,6 +27,8 @@
 		FD1C08A62C07644100BA7C42 /* linkedList_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD1C08A42C07644100BA7C42 /* linkedList_ex.cpp */; };
 		FD9631742BF74DA400194C60 /* strings_func_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD9631722BF74DA400194C60 /* strings_func_ex.cpp */; };
 		FDBCED992C0A150400DFE62F /* transactionProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDBCED982C0A150400DFE62F /* transactionProcessor.cpp */; };
+		FDBCEDE42C0A336800DFE62F /* readersWritersProblem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDBCEDE32C0A336800DFE62F /* readersWritersProblem.cpp */; };
+		FDBCEDE72C0A337700DFE62F /* multiThreading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDBCEDE62C0A337700DFE62F /* multiThreading.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,6 +84,11 @@
 		FD9631732BF74DA400194C60 /* strings_func_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = strings_func_ex.hpp; sourceTree = "<group>"; };
 		FDBCED972C0A150400DFE62F /* transactionProcessor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = transactionProcessor.hpp; sourceTree = "<group>"; };
 		FDBCED982C0A150400DFE62F /* transactionProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = transactionProcessor.cpp; sourceTree = "<group>"; };
+		FDBCEDE22C0A336800DFE62F /* readersWritersProblem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = readersWritersProblem.hpp; path = hackerrank/readersWritersProblem.hpp; sourceTree = "<group>"; };
+		FDBCEDE32C0A336800DFE62F /* readersWritersProblem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = readersWritersProblem.cpp; path = hackerrank/readersWritersProblem.cpp; sourceTree = "<group>"; };
+		FDBCEDE52C0A337700DFE62F /* multiThreading.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = multiThreading.hpp; path = hackerrank/multiThreading.hpp; sourceTree = "<group>"; };
+		FDBCEDE62C0A337700DFE62F /* multiThreading.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = multiThreading.cpp; path = hackerrank/multiThreading.cpp; sourceTree = "<group>"; };
+		FDBCEDE92C0A34CE00DFE62F /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +105,13 @@
 		1FC6B6762913A8430090AB83 = {
 			isa = PBXGroup;
 			children = (
+				FDBCEDE62C0A337700DFE62F /* multiThreading.cpp */,
+				FDBCEDE52C0A337700DFE62F /* multiThreading.hpp */,
+				FDBCEDE32C0A336800DFE62F /* readersWritersProblem.cpp */,
+				FDBCEDE22C0A336800DFE62F /* readersWritersProblem.hpp */,
 				1FC6B6812913A8440090AB83 /* hackerrank */,
 				1FC6B6802913A8440090AB83 /* Products */,
+				FDBCEDE82C0A34CD00DFE62F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +201,23 @@
 			path = strings;
 			sourceTree = "<group>";
 		};
+		FDBCEDE82C0A34CD00DFE62F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDBCEDEA2C0A34CE00DFE62F /* nlohmann_json */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDBCEDEA2C0A34CE00DFE62F /* nlohmann_json */ = {
+			isa = PBXGroup;
+			children = (
+				FDBCEDE92C0A34CE00DFE62F /* json.hpp */,
+			);
+			name = nlohmann_json;
+			path = "../telus/chr-provider-app/ios/Pods/FirebaseFirestoreInternal/Firestore/third_party/nlohmann_json";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,6 +279,7 @@
 				FD1C08A22C075DD000BA7C42 /* array_func_ex.cpp in Sources */,
 				7582434C2957226700E97A4B /* array_manipulation_ex.cpp in Sources */,
 				7593380D291C9D2A00846DBE /* dynamicArray_ex.cpp in Sources */,
+				FDBCEDE72C0A337700DFE62F /* multiThreading.cpp in Sources */,
 				FD1C08A62C07644100BA7C42 /* linkedList_ex.cpp in Sources */,
 				FD9631742BF74DA400194C60 /* strings_func_ex.cpp in Sources */,
 				7582434F2957226700E97A4B /* hourglassSum_ex.cpp in Sources */,
@@ -257,6 +287,7 @@
 				1FC6B6832913A8440090AB83 /* main.cpp in Sources */,
 				75E2DDD5292FDB8C00574975 /* sumVsXor_ex.cpp in Sources */,
 				75E2DDD2291D1F0700574975 /* gridChallenge_ex.cpp in Sources */,
+				FDBCEDE42C0A336800DFE62F /* readersWritersProblem.cpp in Sources */,
 				FDBCED992C0A150400DFE62F /* transactionProcessor.cpp in Sources */,
 				1F662085291E471300A6C45D /* primeDates_ex.cpp in Sources */,
 				1F1A8639295CB6BD003E5F1E /* tree_ex.cpp in Sources */,

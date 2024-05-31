@@ -29,6 +29,7 @@
 
 using namespace std;
 
+/*
 
 class Client {
     int id;
@@ -85,9 +86,11 @@ class Processor {
             Transaction tr = trs[i];
             clients[tr.clientFromId].reduce(tr.amount);
             clients[tr.clientToId].deposit(tr.amount);
-        }
+    }
         transactions.remove[currentDate];
     }
     
     
 };
+
+*/

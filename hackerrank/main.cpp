@@ -24,6 +24,7 @@
 #include "sorting_ex.hpp"
 #include "strings_func_ex.hpp"
 #include "array_func_ex.hpp"
+#include "multiThreading.hpp"
 
 using namespace std;
 
@@ -46,7 +47,7 @@ int main(int argc, const char * argv[]) {
 //    array_manipulation_ex();
 //    linkedList_ex();
 //    doublyLinkedList_ex();
-    tree_ex();
+//    tree_ex();
 //    tree_huffman_decoding_ex();
 //   stack_ex();
 //    sorting_ex();
@@ -55,6 +56,7 @@ int main(int argc, const char * argv[]) {
 //    strongPassword_ex();
 //    mergeTwoSortArrays_ex();
 //    subarrayDivision_ex();
+    execute();
     
     return 0;
 }
