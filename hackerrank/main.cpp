@@ -46,14 +46,15 @@ int main(int argc, const char * argv[]) {
 //    array_manipulation_ex();
 //    linkedList_ex();
 //    doublyLinkedList_ex();
-//    tree_ex();
+    tree_ex();
 //    tree_huffman_decoding_ex();
 //   stack_ex();
 //    sorting_ex();
 //    superReducedString_ex();
 //    camelcase_ex();
 //    strongPassword_ex();
-    mergeTwoSortArrays_ex();
+//    mergeTwoSortArrays_ex();
+//    subarrayDivision_ex();
     
     return 0;
 }
