@@ -61,7 +61,8 @@ int main(int argc, const char * argv[]) {
 //    execute();
 //    readers_writers_read_priority_ex();
 //    readers_writers_write_priority_ex();
-    producer_consumer_problem_ex();
+//    producer_consumer_problem_ex();
+    producer_consumer_problem_with_semaphore_ex();
     
     return 0;
 }
