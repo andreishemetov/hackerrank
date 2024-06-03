@@ -25,6 +25,7 @@
 #include "strings_func_ex.hpp"
 #include "array_func_ex.hpp"
 #include "multiThreading.hpp"
+#include "readersWritersProblem.hpp"
 
 using namespace std;
 
@@ -56,7 +57,9 @@ int main(int argc, const char * argv[]) {
 //    strongPassword_ex();
 //    mergeTwoSortArrays_ex();
 //    subarrayDivision_ex();
-    execute();
+//    execute();
+//    readers_writers_read_priority_ex();
+    readers_writers_write_priority_ex();
     
     return 0;
 }
