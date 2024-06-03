@@ -26,6 +26,7 @@
 #include "array_func_ex.hpp"
 #include "multiThreading.hpp"
 #include "readersWritersProblem.hpp"
+#include "producerConsumerProblem.hpp"
 
 using namespace std;
 
@@ -59,7 +60,8 @@ int main(int argc, const char * argv[]) {
 //    subarrayDivision_ex();
 //    execute();
 //    readers_writers_read_priority_ex();
-    readers_writers_write_priority_ex();
+//    readers_writers_write_priority_ex();
+    producer_consumer_problem_ex();
     
     return 0;
 }
