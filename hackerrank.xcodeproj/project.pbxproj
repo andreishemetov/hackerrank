@@ -30,6 +30,7 @@
 		FDBCEDE42C0A336800DFE62F /* readersWritersProblem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDBCEDE32C0A336800DFE62F /* readersWritersProblem.cpp */; };
 		FDBCEDE72C0A337700DFE62F /* multiThreading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDBCEDE62C0A337700DFE62F /* multiThreading.cpp */; };
 		FDBCEDEE2C0DF6C800DFE62F /* producerConsumerProblem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDBCEDEC2C0DF6C800DFE62F /* producerConsumerProblem.cpp */; };
+		FDBCEDF12C10AFD000DFE62F /* restaurantProblem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDBCEDEF2C10AFD000DFE62F /* restaurantProblem.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -92,6 +93,8 @@
 		FDBCEDE92C0A34CE00DFE62F /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
 		FDBCEDEC2C0DF6C800DFE62F /* producerConsumerProblem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = producerConsumerProblem.cpp; sourceTree = "<group>"; };
 		FDBCEDED2C0DF6C800DFE62F /* producerConsumerProblem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = producerConsumerProblem.hpp; sourceTree = "<group>"; };
+		FDBCEDEF2C10AFD000DFE62F /* restaurantProblem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = restaurantProblem.cpp; sourceTree = "<group>"; };
+		FDBCEDF02C10AFD000DFE62F /* restaurantProblem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = restaurantProblem.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,14 +128,7 @@
 		1FC6B6812913A8440090AB83 /* hackerrank */ = {
 			isa = PBXGroup;
 			children = (
-				FDBCEDEC2C0DF6C800DFE62F /* producerConsumerProblem.cpp */,
-				FDBCEDED2C0DF6C800DFE62F /* producerConsumerProblem.hpp */,
-				FDBCEDE62C0A337700DFE62F /* multiThreading.cpp */,
-				FDBCEDE52C0A337700DFE62F /* multiThreading.hpp */,
-				FDBCEDE32C0A336800DFE62F /* readersWritersProblem.cpp */,
-				FDBCEDE22C0A336800DFE62F /* readersWritersProblem.hpp */,
-				FDBCED982C0A150400DFE62F /* transactionProcessor.cpp */,
-				FDBCED972C0A150400DFE62F /* transactionProcessor.hpp */,
+				FDBCEDF22C10AFDA00DFE62F /* threads */,
 				FD1C08A72C07791400BA7C42 /* stack */,
 				FD1C08A32C0763FA00BA7C42 /* linkedList */,
 				FD1C08A12C075DD000BA7C42 /* array */,
@@ -223,6 +219,23 @@
 			path = "../telus/chr-provider-app/ios/Pods/FirebaseFirestoreInternal/Firestore/third_party/nlohmann_json";
 			sourceTree = "<group>";
 		};
+		FDBCEDF22C10AFDA00DFE62F /* threads */ = {
+			isa = PBXGroup;
+			children = (
+				FDBCEDED2C0DF6C800DFE62F /* producerConsumerProblem.hpp */,
+				FDBCEDEC2C0DF6C800DFE62F /* producerConsumerProblem.cpp */,
+				FDBCEDEF2C10AFD000DFE62F /* restaurantProblem.cpp */,
+				FDBCEDF02C10AFD000DFE62F /* restaurantProblem.hpp */,
+				FDBCEDE62C0A337700DFE62F /* multiThreading.cpp */,
+				FDBCEDE52C0A337700DFE62F /* multiThreading.hpp */,
+				FDBCEDE32C0A336800DFE62F /* readersWritersProblem.cpp */,
+				FDBCEDE22C0A336800DFE62F /* readersWritersProblem.hpp */,
+				FDBCED982C0A150400DFE62F /* transactionProcessor.cpp */,
+				FDBCED972C0A150400DFE62F /* transactionProcessor.hpp */,
+			);
+			path = threads;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,6 +301,7 @@
 				FDBCEDE72C0A337700DFE62F /* multiThreading.cpp in Sources */,
 				FD1C08A62C07644100BA7C42 /* linkedList_ex.cpp in Sources */,
 				FD9631742BF74DA400194C60 /* strings_func_ex.cpp in Sources */,
+				FDBCEDF12C10AFD000DFE62F /* restaurantProblem.cpp in Sources */,
 				7582434F2957226700E97A4B /* hourglassSum_ex.cpp in Sources */,
 				1FD5B1ED291AB1B000A14D0E /* maxMin_ex.cpp in Sources */,
 				1FC6B6832913A8440090AB83 /* main.cpp in Sources */,

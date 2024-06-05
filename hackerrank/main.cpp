@@ -27,6 +27,7 @@
 #include "multiThreading.hpp"
 #include "readersWritersProblem.hpp"
 #include "producerConsumerProblem.hpp"
+#include "restaurantProblem.hpp"
 
 using namespace std;
 
@@ -62,7 +63,8 @@ int main(int argc, const char * argv[]) {
 //    readers_writers_read_priority_ex();
 //    readers_writers_write_priority_ex();
 //    producer_consumer_problem_ex();
-    producer_consumer_problem_with_semaphore_ex();
+//    producer_consumer_problem_with_semaphore_ex();
+    executeRestaurant_ex();
     
     return 0;
 }

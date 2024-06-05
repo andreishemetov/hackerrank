@@ -27,7 +27,7 @@ void producer(int value) {
     buffer.push(value); // Add value to the buffer
     std::cout << "Producing " << value << std::endl; // Output the produced value
     std::cout << "Buffer size after producing: " << buffer.size() << std::endl << std::endl; // Display buffer size after producing
-    lock.unlock(); // Unlock the mutex
+//    lock.unlock(); // Unlock the mutex
     cond_var.notify_one(); // Notify one waiting thread
 }
 
@@ -38,7 +38,7 @@ void consumer() {
     buffer.pop(); // Remove the value from buffer
     std::cout << "Consuming " << value << std::endl; // Output the consumed value
     std::cout << "Buffer size after consuming: " << buffer.size() << std::endl << std::endl; // Display buffer size after consuming
-    lock.unlock(); // Unlock the mutex
+//    lock.unlock(); // Unlock the mutex
     cond_var.notify_one(); // Notify one waiting thread
 }
 
