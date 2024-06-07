@@ -64,7 +64,10 @@ int main(int argc, const char * argv[]) {
 //    readers_writers_write_priority_ex();
 //    producer_consumer_problem_ex();
 //    producer_consumer_problem_with_semaphore_ex();
-    executeRestaurant_ex();
+//    executeRestaurant_ex();
+//    maxProfit_ex();
+//    removeElement_ex();
+    removeDuplicates_ex();
     
     return 0;
 }

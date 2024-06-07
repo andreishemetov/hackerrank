@@ -67,8 +67,10 @@ void producer1(int value) {
     semaphoreEmpty.acquire(); // Wait until there's space in buffer
     std::unique_lock<std::mutex> lock(mtx); // Lock the mutex
     buffer.push(value); // Add value to the buffer
-    std::cout << "Producing " << value << std::endl; // Output the produced value
-    std::cout << "Buffer size after producing: " << buffer.size() << std::endl << std::endl; // Display buffer size after producing
+    std::cout << "Producing " << value << " start" << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    std::cout << "Buffer size after producing: " << buffer.size() << std::endl; // Display buffer size after producing
+    std::cout << "Producing " << value << " finish" << std::endl << std::endl; // Output the produced value// Output the producevalue
     lock.unlock(); // Unlock the mutex
     semaphoreFull.release();
 }
@@ -78,8 +80,10 @@ void consumer1() {
     std::unique_lock<std::mutex> lock(mtx); // Lock the mutex
     int value = buffer.front(); // Get the front value from buffer
     buffer.pop(); // Remove the value from buffer
-    std::cout << "Consuming " << value << std::endl; // Output the consumed value
-    std::cout << "Buffer size after consuming: " << buffer.size() << std::endl << std::endl; // Display buffer size after consuming
+    std::cout << "Consuming " << value << " start" << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    std::cout << "Buffer size after consuming: " << buffer.size() << std::endl; // Display buffer size after consuming
+    std::cout << "Consuming " << value << " finish" << std::endl << std::endl; // Output the consumed value
     lock.unlock(); // Unlock the mutex
     semaphoreEmpty.release();
 }

@@ -96,3 +96,122 @@ void subarrayDivision_ex() {
     int result = subarrayDivision(v, d, m);
     cout<<endl;
 }
+
+/*
+ https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/?submissionId=1280563443
+ Best time to Buy and Sell Stock
+ You are given an array prices where prices[i] is the price of a given stock on the ith day.
+ You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+ Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+ 
+ Input: prices = [7,1,5,3,6,4]
+ Output: 5
+ 
+ */
+
+int maxProfit(vector<int> prices) {
+    int bp = prices.front();
+    int profit = 0;
+    for (int i=1; i<prices.size(); i++) {
+        int p = prices[i];
+        if (p-bp > profit) {
+            profit = p - bp;
+        }
+        if (p<bp) {
+            bp = p;
+        }
+    }
+    return profit;
+}
+
+void maxProfit_ex() {
+    cout << "maxProfit_ex\n";
+    vector<int> prices = {7,1,5,3,6,4};
+    int result = maxProfit(prices);
+    cout<<"maxProfit "<<result<<endl;
+}
+
+/*
+ https://leetcode.com/problems/remove-element/description/?envType=study-plan-v2&envId=top-interview-150
+ Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+ Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
+ Change the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.
+ 
+ Input: nums = [0,1,2,2,3,0,4,2], val = 2
+ Output: 5, nums = [0,1,3,0,4,_,_,_]
+ 
+ */
+
+int removeElement(vector<int>& nums, int val) {
+    int last = 0;
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] != val) {
+            nums[last] = nums[i];
+            last++;
+        }
+    }
+    return last;
+}
+
+void removeElement_ex() {
+    cout << "removeElement_ex\n";
+    vector<int> nums = {0,1,2,2,3,0,4,2};
+    int val = 2;
+    int result = removeElement(nums, val);
+    cout<<"result "<<result<<endl;
+}
+
+/*
+ Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice. The relative order of the elements should be kept the same.
+ Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
+ Return k after placing the final result in the first k slots of nums.
+ Input: nums = [0,0,1,1,1,1,2,3,3]
+ Output: 7, nums = [0,0,1,1,2,3,3,_,_]
+ */
+
+int removeDuplicates(vector<int>& nums, int canRepeatNumber) {
+    int last = -1;
+    int repeatNumber = 1;
+    for (int i = 0; i < nums.size(); i++) {
+        if (last < 0 || nums[i] != nums[last] || (nums[i] == nums[last] && repeatNumber < canRepeatNumber)) {
+            if (last < 0 || nums[i] != nums[last]) {
+                repeatNumber = 1;
+            } else {
+                repeatNumber ++;
+            }
+            last++;
+            nums[last] = nums[i];
+            
+        }
+    }
+    return last + 1;
+}
+
+int removeDuplicates_leetCode(vector<int>& nums, int canRepeatNumber) {
+    //Edge case: If length of nums is less than or equal to canRepeatNumber, return length
+    if (nums.size() <= canRepeatNumber) return (int)nums.size();
+       
+    // Initialize slow pointer
+    int slow = canRepeatNumber;
+    
+    // Iterate through the array with fast pointer
+    for (int fast = canRepeatNumber; fast < nums.size(); fast++){
+        // If current element is not equal to element at slow - canRepeatNumber
+        if (nums[fast] != nums[slow-canRepeatNumber]){
+            // Update element at slow and increment slow
+            nums[slow] = nums[fast];
+            slow += 1;
+            
+        }
+    }
+    return slow;
+}
+
+void removeDuplicates_ex() {
+    cout << "removeDuplicates_ex\n";
+    vector<int> nums = {0,0,1,2,2,2,3,3,4,6,6,10,10,10,10,12,13};
+    int canRepeatNumber = 2;
+    int result = removeDuplicates_leetCode(nums,canRepeatNumber);
+    cout<<"result "<<result<<endl;
+}
+
