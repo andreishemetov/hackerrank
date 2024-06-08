@@ -13,5 +13,6 @@
 void superReducedString_ex();
 void camelcase_ex();
 void strongPassword_ex();
+void canConstruct_ex();
 
 #endif /* strings_func_ex_hpp */

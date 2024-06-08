@@ -67,7 +67,8 @@ int main(int argc, const char * argv[]) {
 //    executeRestaurant_ex();
 //    maxProfit_ex();
 //    removeElement_ex();
-    removeDuplicates_ex();
+//    removeDuplicates_ex();
+    canConstruct_ex();
     
     return 0;
 }

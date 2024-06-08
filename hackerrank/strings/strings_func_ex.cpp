@@ -10,6 +10,7 @@
 #include <set>
 #include <algorithm>
 #include <iostream>
+#include <map>
 
 using namespace std;
 
@@ -100,6 +101,34 @@ void strongPassword_ex() {
     int expected = 1;
     int calculated = strongPassword((int)input.length(), input);
     string result = calculated == expected ? "SUCCESS" : "FAILURE";
+    cout <<">> Test "<<result<<endl;
+    cout<<endl;
+}
+
+bool canConstruct(string ransomNote, string magazine) {
+    if (magazine.length() < ransomNote.length()) return false;
+    int result = 0;
+    vector<int> letters('z' - 'a' + 1, 0);
+    for (int i=0; i<magazine.length(); i++){
+        char lm = magazine[i];
+        int ilm = lm - 'a';
+        letters[ilm] = letters[ilm] + 1;
+        if (letters[ilm] == 0) result++;
+        if (i < ransomNote.length()) {
+            char lr = ransomNote[i];
+            int ilr = lr - 'a';
+            letters[ilr] = letters[ilr] - 1;
+            if (letters[ilr] == -1) result--;
+        }
+    }
+    return result >= 0;
+}
+
+void canConstruct_ex(){
+    cout << "canConstruct_ex\n";
+    string ransomNote = "aa";
+    string magazine = "ab";
+    bool result = canConstruct(ransomNote, magazine);
     cout <<">> Test "<<result<<endl;
     cout<<endl;
 }
