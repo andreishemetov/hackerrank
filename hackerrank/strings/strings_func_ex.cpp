@@ -132,3 +132,21 @@ void canConstruct_ex(){
     cout <<">> Test "<<result<<endl;
     cout<<endl;
 }
+
+bool isIsomorphic(string s, string t) {
+    if (s.size() != t.size()) return false;
+    map<char, char> ms;
+    map<char, char> mt;
+    for (int i=0; i<s.size(); i++){
+        
+    }
+}
+
+void isIsomorphic_ex() {
+    cout << "isIsomorphic_ex\n";
+    string s = "paper";
+    string t = "title";
+    bool result = isIsomorphic(s, t);
+    cout <<">> Test "<<result<<endl;
+    cout<<endl;
+}
