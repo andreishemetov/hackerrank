@@ -138,8 +138,20 @@ bool isIsomorphic(string s, string t) {
     map<char, char> ms;
     map<char, char> mt;
     for (int i=0; i<s.size(); i++){
-        
+        char cs = s[i];
+        char ct = t[i];
+        if (ms.contains(cs)) {
+            if (ms[cs] != ct) return false;
+        } else {
+            ms[cs] = ct;
+        }
+        if (mt.contains(ct)) {
+            if (mt[ct] != cs) return false;
+        } else {
+            mt[ct] = cs;
+        }
     }
+    return true;
 }
 
 void isIsomorphic_ex() {

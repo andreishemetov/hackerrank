@@ -68,7 +68,8 @@ int main(int argc, const char * argv[]) {
 //    maxProfit_ex();
 //    removeElement_ex();
 //    removeDuplicates_ex();
-    canConstruct_ex();
+//    canConstruct_ex();
+    isIsomorphic_ex();
     
     return 0;
 }
