@@ -274,3 +274,46 @@ void rotateArray_ex(){
     cout <<">> Test "<<result<<endl;
     cout<<endl;
 }
+
+/*
+ https://leetcode.com/problems/majority-element/description/?envType=study-plan-v2&envId=top-interview-150
+ Majority Element
+ Given an array nums of size n, return the majority element.
+ The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+  Input: nums = [2,2,1,1,1,2,2]
+ Output: 2
+  */
+
+int majorityElement(vector<int>& nums) {
+    int n = (int)nums.size();
+    sort(nums.begin(), nums.end());
+    return nums[n/2];
+}
+
+int majorityElement_leetcode(vector<int>& nums) {
+    int count = 0;
+            int candidate = 0;
+            
+            for (int num : nums) {
+                if (count == 0) {
+                    candidate = num;
+                }
+                
+                if (num == candidate) {
+                    count++;
+                } else {
+                    count--;
+                }
+            }
+            
+            return candidate;
+}
+
+
+void majorityElement_ex(){
+    cout << "majorityElement_ex\n";
+    vector<int> nums = {2,2,1,1,1,2,2};
+    int result = majorityElement_leetcode(nums);
+    cout <<">> Test "<<result<<endl;
+    cout<<endl;
+}
