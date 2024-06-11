@@ -15,5 +15,6 @@ void subarrayDivision_ex();
 void maxProfit_ex();
 void removeElement_ex();
 void removeDuplicates_ex();
+void rotateArray_ex();
 
 #endif /* array_func_ex_hpp */

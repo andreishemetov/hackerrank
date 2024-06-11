@@ -215,3 +215,62 @@ void removeDuplicates_ex() {
     cout<<"result "<<result<<endl;
 }
 
+/*
+ Rotate array
+ Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+ Input: nums = [1,2,3,4,5,6,7], k = 3
+ Output: [5,6,7,1,2,3,4]
+ */
+
+void rotateArray_sol1(vector<int>& nums, int k) {
+    int b = 0;
+    int e = (int)nums.size() - 1;
+    while (b<e) {
+        int v = nums[b];
+        nums[b] = nums[e];
+        nums[e] = v;
+        b++;
+        e--;
+    }
+    
+    b = 0;
+    e = k - 1;
+    while (b<e) {
+        int v = nums[b];
+        nums[b] = nums[e];
+        nums[e] = v;
+        b++;
+        e--;
+    }
+    
+    b = k;
+    e = (int)nums.size() - 1;
+    while (b<e) {
+        int v = nums[b];
+        nums[b] = nums[e];
+        nums[e] = v;
+        b++;
+        e--;
+    }
+}
+
+void rotateArray_sol2(vector<int>& nums, int k) {
+    vector<int> result(nums.size());
+    for (int i=0; i<nums.size(); i++){
+        int j = (i+k) % nums.size();
+        result[j] = nums[i];
+    }
+    nums = result;
+}
+
+
+void rotateArray_ex(){
+    cout << "rotateArray_ex\n";
+    vector<int> nums = {1,2,3,4,5,6,7};
+    int k = 3;
+    rotateArray_sol2(nums, k);
+    vector<int> expResult = {5,6,7,1,2,3,4};
+    string result = nums == expResult ? "SUCCESS" : "FAILURE";
+    cout <<">> Test "<<result<<endl;
+    cout<<endl;
+}

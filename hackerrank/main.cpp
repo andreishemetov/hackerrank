@@ -69,7 +69,8 @@ int main(int argc, const char * argv[]) {
 //    removeElement_ex();
 //    removeDuplicates_ex();
 //    canConstruct_ex();
-    isIsomorphic_ex();
+//    isIsomorphic_ex();
+    rotateArray_ex();
     
     return 0;
 }

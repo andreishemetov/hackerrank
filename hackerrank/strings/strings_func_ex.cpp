@@ -133,6 +133,18 @@ void canConstruct_ex(){
     cout<<endl;
 }
 
+/*
+ https://leetcode.com/problems/isomorphic-strings/description/?envType=study-plan-v2&envId=top-interview-150
+ 
+Isomorphic Strings
+ Given two strings s and t, determine if they are isomorphic.
+ Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+ All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
+ Input: s = "paper", t = "title"
+ Output: true
+ 
+ */
+
 bool isIsomorphic(string s, string t) {
     if (s.size() != t.size()) return false;
     map<char, char> ms;
