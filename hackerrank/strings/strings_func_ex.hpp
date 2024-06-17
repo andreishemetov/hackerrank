@@ -15,5 +15,6 @@ void camelcase_ex();
 void strongPassword_ex();
 void canConstruct_ex();
 void isIsomorphic_ex();
+void isPalindrome_ex();
 
 #endif /* strings_func_ex_hpp */

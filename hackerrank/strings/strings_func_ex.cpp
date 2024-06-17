@@ -10,6 +10,7 @@
 #include <set>
 #include <algorithm>
 #include <iostream>
+#include <ctype.h>
 #include <map>
 
 using namespace std;
@@ -171,6 +172,50 @@ void isIsomorphic_ex() {
     string s = "paper";
     string t = "title";
     bool result = isIsomorphic(s, t);
+    cout <<">> Test "<<result<<endl;
+    cout<<endl;
+}
+
+
+/*
+ https://leetcode.com/problems/valid-palindrome/description/?envType=study-plan-v2&envId=top-interview-150
+ 
+125 Valid palindrome
+ A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+ Given a string s, return true if it is a palindrome, or false otherwise.
+
+ Example 1:
+
+ Input: s = "A man, a plan, a canal: Panama"
+ Output: true
+ Explanation: "amanaplanacanalpanama" is a palindrome.
+ 
+ */
+
+bool isPalindrome(string s) {
+    char *b = &s[0];
+    char *e = &s[s.length()-1];
+    while (b < e) {
+        char bv = *b;
+        char ev = *e;
+        if(!isalnum(bv)){b++; continue;}
+        if(!isalnum(ev)){e--;continue;}
+        if(tolower(bv)!=tolower(ev)) {
+            return false;
+        } else {
+            b++;
+            e--;
+        }
+    }
+    return true;
+}
+
+void isPalindrome_ex() {
+    cout << "isPalindrome_ex\n";
+    string s = "A man, a plan, a canal: Panama";
+//    string s = "  ";
+//    string s = "0P";
+    bool result = isPalindrome(s);
     cout <<">> Test "<<result<<endl;
     cout<<endl;
 }

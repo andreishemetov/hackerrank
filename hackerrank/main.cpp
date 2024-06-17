@@ -70,7 +70,8 @@ int main(int argc, const char * argv[]) {
 //    removeDuplicates_ex();
 //    canConstruct_ex();
 //    isIsomorphic_ex();
-    rotateArray_ex();
+//    rotateArray_ex();
+    isPalindrome_ex();
     
     return 0;
 }
