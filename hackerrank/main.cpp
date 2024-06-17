@@ -72,6 +72,7 @@ int main(int argc, const char * argv[]) {
 //    isIsomorphic_ex();
 //    rotateArray_ex();
     isPalindrome_ex();
+//    majorityElement_ex();
     
     return 0;
 }
