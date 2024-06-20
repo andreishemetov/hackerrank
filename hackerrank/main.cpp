@@ -71,8 +71,10 @@ int main(int argc, const char * argv[]) {
 //    canConstruct_ex();
 //    isIsomorphic_ex();
 //    rotateArray_ex();
-    isPalindrome_ex();
+//    isPalindrome_ex();
 //    majorityElement_ex();
+//    twoSumt_ex();
+    simplifyPath_ex();
     
     return 0;
 }

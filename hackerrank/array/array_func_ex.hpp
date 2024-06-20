@@ -17,5 +17,6 @@ void removeElement_ex();
 void removeDuplicates_ex();
 void rotateArray_ex();
 void majorityElement_ex();
+void twoSumt_ex();
 
 #endif /* array_func_ex_hpp */

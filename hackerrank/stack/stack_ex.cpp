@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <stack>
 #include <deque>
+#include <sstream>
 
 using namespace std;
 
@@ -124,4 +125,61 @@ void stack_ex(){
 //    vector<int> v = {3,4,7,6,5}; int q = 1; // result {4,6,3,7,5}
 //    vector<int> v = {3,3,4,4,9}; int q = 2; // result {4,4,9,3,3}
     waiter(v, q);
+}
+
+/*
+ https://leetcode.com/problems/simplify-path/description/?envType=study-plan-v2&envId=top-interview-150
+ 71. Simplify Path
+ Given an absolute path for a Unix-style file system, which begins with a slash '/', transform this path into its simplified canonical path.
+ In Unix-style file system context, a single period '.' signifies the current directory, a double period ".." denotes moving up one directory level, and multiple slashes such as "//" are interpreted as a single slash. In this problem, treat sequences of periods not covered by the previous rules (like "...") as valid names for files or directories.
+
+ The simplified canonical path should adhere to the following rules:
+
+ It must start with a single slash '/'.
+ Directories within the path should be separated by only one slash '/'.
+ It should not end with a slash '/', unless it's the root directory.
+ It should exclude any single or double periods used to denote current or parent directories.
+ Return the new path.
+
+ Example 1:
+ Input: path = "/home/"
+ Output: "/home"
+
+ Example 2:
+ Input: path = "/home//foo/"
+ Output: "/home/foo"
+
+ Example 3:
+ Input: path = "/home/user/Documents/../Pictures"
+ Output: "/home/user/Pictures"
+  */
+
+string simplifyPath(string path) {
+    stringstream data(path);
+    string line;
+    vector<string> result;
+    while(getline(data,line,'/')) {
+        if (!line.empty() && line != "."){
+            if (line == ".."){
+                if (!result.empty()) result.pop_back();
+            } else {
+                result.push_back(line);
+            }
+        }
+    }
+    if (result.empty()) return "/";
+    string rpath = "";
+    for (int i=0; i<result.size(); i++){
+        rpath += "/" + result[i];
+    }
+    
+    return rpath;
+}
+
+void simplifyPath_ex(){
+    cout << "simplifyPath_ex\n";
+    string path = "/.../a/../b/c/../d/./";
+    string result = simplifyPath(path);
+    cout <<">> Test "<<result<<endl;
+    cout<<endl;
 }

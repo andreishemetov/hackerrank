@@ -9,5 +9,6 @@
 #define stack_ex_hpp
 
 void stack_ex();
+void simplifyPath_ex();
 
 #endif /* stack_ex_hpp */
