@@ -183,3 +183,63 @@ void simplifyPath_ex(){
     cout <<">> Test "<<result<<endl;
     cout<<endl;
 }
+
+
+/*
+ https://leetcode.com/problems/min-stack/description/?envType=study-plan-v2&envId=top-interview-150
+ 155. Min Stack
+ 
+ Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+
+ Implement the MinStack class:
+
+ MinStack() initializes the stack object.
+ void push(int val) pushes the element val onto the stack.
+ void pop() removes the element on the top of the stack.
+ int top() gets the top element of the stack.
+ int getMin() retrieves the minimum element in the stack.
+ You must implement a solution with O(1) time complexity for each function.
+ */
+
+class MinStack {
+    vector<int> stack;
+    vector<int> minStack;
+    
+    // or use one stack vector< pair<int,int> > s;
+public:
+    MinStack() {
+        
+    }
+    
+    void push(int val) {
+        minStack.push_back(stack.empty() ? val : min(minStack.back(), val));
+        stack.push_back(val);
+    }
+    
+    void pop() {
+        stack.pop_back();
+        minStack.pop_back();
+    }
+    
+    int top() {
+        return stack.back();
+    }
+    
+    int getMin() {
+        return minStack.back();
+    }
+};
+
+
+void minStack_ex(){
+    cout << "minStack_ex\n";
+    MinStack minStack = MinStack();
+    minStack.push(-2);
+    minStack.push(0);
+    minStack.push(-1);
+    int m = minStack.getMin();
+    int t = minStack.top();
+    minStack.pop();
+    m = minStack.getMin();
+    cout<<endl;
+}

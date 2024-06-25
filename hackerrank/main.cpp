@@ -74,7 +74,8 @@ int main(int argc, const char * argv[]) {
 //    isPalindrome_ex();
 //    majorityElement_ex();
 //    twoSumt_ex();
-    simplifyPath_ex();
+//    simplifyPath_ex();
+    minStack_ex();
     
     return 0;
 }

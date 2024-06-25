@@ -10,5 +10,6 @@
 
 void stack_ex();
 void simplifyPath_ex();
+void minStack_ex();
 
 #endif /* stack_ex_hpp */
