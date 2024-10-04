@@ -195,6 +195,32 @@ bool has_cycle(SinglyLinkedListNode* head) {
     return false;
 }
 
+SinglyLinkedListNode* addTwoNumbers(SinglyLinkedListNode* l1, SinglyLinkedListNode* l2) {
+    SinglyLinkedListNode *result = nullptr;
+    SinglyLinkedListNode *pr = nullptr;
+    SinglyLinkedListNode *pl1 = l1;
+    SinglyLinkedListNode *pl2 = l2;
+    int added = 0;
+    while (pl1 != nullptr || pl2 != nullptr) {
+        int n1 = pl1 == nullptr ? 0 : pl1->data;
+        int n2 = pl2 == nullptr ? 0 : pl2->data;
+        int summ = n1 + n2 + added;
+                int n = summ % 10;
+                added = summ / 10;
+                if (pr == nullptr){
+                    pr = new SinglyLinkedListNode(n);
+                    result = pr;
+                } else {
+                    pr->next = new SinglyLinkedListNode(n);
+                    pr = pr->next;
+                }
+        if (pl1 != nullptr) pl1 = pl1->next;
+       if (pl2 != nullptr) pl2 = pl2->next;
+    }
+    return result;
+}
+
+
 void linkedList_ex(){
     SinglyLinkedListNode *list = NULL;
     list = insertNodeAtTail(list, 1);
@@ -213,74 +239,4 @@ void linkedList_ex(){
     list2 = insertNodeAtTail(list2, 5);
     
     int v = getNodeFromTailPosition(list, 2);
-}
-
-class DoublyLinkedListNode {
-public:
-    int data;
-    DoublyLinkedListNode* next = NULL;
-    DoublyLinkedListNode* prev = NULL;
-    
-    DoublyLinkedListNode(int data) {
-        this->data = data;
-    }
-    
-    DoublyLinkedListNode(int data, DoublyLinkedListNode* next, DoublyLinkedListNode* prev) {
-        this->data = data;
-        this->next = next;
-        this->prev = prev;
-    }
-    
-};
-
-DoublyLinkedListNode* sortedInsert(DoublyLinkedListNode* llist, int data) {
-    if (llist->data > data) {
-        DoublyLinkedListNode *root = new DoublyLinkedListNode(data, llist, NULL);
-        llist->prev = root;
-        return root;
-    }
-    
-    DoublyLinkedListNode *node = llist;
-    while (node->next != NULL && node->next->data < data) {
-        node = node->next;
-    }
-    
-    DoublyLinkedListNode *newNode = new DoublyLinkedListNode(data, node->next, node);
-    if (node->next != NULL){
-        node->next->prev = newNode;
-    }    
-    node->next = newNode;
-    
-    return llist;
-}
-
-DoublyLinkedListNode* reverse(DoublyLinkedListNode* llist) {
-    DoublyLinkedListNode *node = llist;
-    while (1) {
-        DoublyLinkedListNode *temp = node->next;
-        node->next = node->prev;
-        node->prev = temp;
-        if (temp == NULL){
-            break;
-        }
-        node = temp;
-    }
-    return node;
-}
-
-
-void doublyLinkedList_ex(){
-    DoublyLinkedListNode *sortedList = new DoublyLinkedListNode(1);
-    DoublyLinkedListNode *node = sortedList;
-    DoublyLinkedListNode *nextNode = new DoublyLinkedListNode(3, NULL, node);
-    node->next = nextNode;
-    node = nextNode;
-    nextNode = new DoublyLinkedListNode(4, NULL, node);
-    node->next = nextNode;
-    node = nextNode;
-    nextNode = new DoublyLinkedListNode(10, NULL, node);
-    node->next = nextNode;
-    
-//    sortedList = sortedInsert(sortedList, 11);
-    DoublyLinkedListNode *reversedList = reverse(sortedList);
 }

@@ -20,6 +20,7 @@
 		7582434E2957226700E97A4B /* sparse_arrays_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 758243492957226700E97A4B /* sparse_arrays_ex.cpp */; };
 		7582434F2957226700E97A4B /* hourglassSum_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7582434A2957226700E97A4B /* hourglassSum_ex.cpp */; };
 		7593380D291C9D2A00846DBE /* dynamicArray_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7593380B291C9D2900846DBE /* dynamicArray_ex.cpp */; };
+		75ADC0F92CB03DA700C44C6B /* doubleLinkedList_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75ADC0F72CB03DA700C44C6B /* doubleLinkedList_ex.cpp */; };
 		75E2DDD2291D1F0700574975 /* gridChallenge_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD0291D1F0700574975 /* gridChallenge_ex.cpp */; };
 		75E2DDD5292FDB8C00574975 /* sumVsXor_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD3292FDB8C00574975 /* sumVsXor_ex.cpp */; };
 		75E2DDD8292FF5B400574975 /* bomberman_Game_ex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75E2DDD6292FF5B400574975 /* bomberman_Game_ex.cpp */; };
@@ -72,6 +73,8 @@
 		7582434B2957226700E97A4B /* sparse_arrays_ex.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sparse_arrays_ex.hpp; sourceTree = "<group>"; };
 		7593380B291C9D2900846DBE /* dynamicArray_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dynamicArray_ex.cpp; sourceTree = "<group>"; };
 		7593380C291C9D2A00846DBE /* dynamicArray_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dynamicArray_ex.hpp; sourceTree = "<group>"; };
+		75ADC0F72CB03DA700C44C6B /* doubleLinkedList_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = doubleLinkedList_ex.cpp; sourceTree = "<group>"; };
+		75ADC0F82CB03DA700C44C6B /* doubleLinkedList_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = doubleLinkedList_ex.hpp; sourceTree = "<group>"; };
 		75E2DDD0291D1F0700574975 /* gridChallenge_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gridChallenge_ex.cpp; sourceTree = "<group>"; };
 		75E2DDD1291D1F0700574975 /* gridChallenge_ex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = gridChallenge_ex.hpp; sourceTree = "<group>"; };
 		75E2DDD3292FDB8C00574975 /* sumVsXor_ex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sumVsXor_ex.cpp; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 			children = (
 				FD1C08A42C07644100BA7C42 /* linkedList_ex.cpp */,
 				FD1C08A52C07644100BA7C42 /* linkedList_ex.hpp */,
+				75ADC0F72CB03DA700C44C6B /* doubleLinkedList_ex.cpp */,
+				75ADC0F82CB03DA700C44C6B /* doubleLinkedList_ex.hpp */,
 			);
 			path = linkedList;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				FDBCED992C0A150400DFE62F /* transactionProcessor.cpp in Sources */,
 				1F662085291E471300A6C45D /* primeDates_ex.cpp in Sources */,
 				1F1A8639295CB6BD003E5F1E /* tree_ex.cpp in Sources */,
+				75ADC0F92CB03DA700C44C6B /* doubleLinkedList_ex.cpp in Sources */,
 				7582434E2957226700E97A4B /* sparse_arrays_ex.cpp in Sources */,
 				1F1BD3E32922803D00EB0B7C /* recursiveDigitSum_ex.cpp in Sources */,
 				757D78AB29941B6C00EFD1A8 /* sorting_ex.cpp in Sources */,

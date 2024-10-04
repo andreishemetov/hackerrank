@@ -9,6 +9,5 @@
 #define linkedList_ex_hpp
 
 void linkedList_ex();
-void doublyLinkedList_ex();
 
 #endif /* linkedList_ex_hpp */

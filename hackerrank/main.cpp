@@ -18,6 +18,7 @@
 #include "hourglassSum_ex.hpp"
 #include "sparse_arrays_ex.hpp"
 #include "array_manipulation_ex.hpp"
+#include "doubleLinkedList_ex.hpp"
 #include "linkedList_ex.hpp"
 #include "tree_ex.hpp"
 #include "stack_ex.hpp"
@@ -49,7 +50,7 @@ int main(int argc, const char * argv[]) {
 //    sparse_arrays_ex();
 //    array_manipulation_ex();
 //    linkedList_ex();
-//    doublyLinkedList_ex();
+//    doubleLinkedList_ex();
 //    tree_ex();
 //    tree_huffman_decoding_ex();
 //   stack_ex();
