@@ -49,7 +49,7 @@ int main(int argc, const char * argv[]) {
 //    hourglassSum_ex();
 //    sparse_arrays_ex();
 //    array_manipulation_ex();
-//    linkedList_ex();
+    linkedList_ex();
 //    doubleLinkedList_ex();
 //    tree_ex();
 //    tree_huffman_decoding_ex();
@@ -76,7 +76,7 @@ int main(int argc, const char * argv[]) {
 //    majorityElement_ex();
 //    twoSumt_ex();
 //    simplifyPath_ex();
-    minStack_ex();
+//    minStack_ex();
     
     return 0;
 }

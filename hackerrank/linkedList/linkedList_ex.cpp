@@ -47,42 +47,42 @@ SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
 
 SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* llist, int data, int position) {
     SinglyLinkedListNode* newNode = new SinglyLinkedListNode(data);
-        if (position == 0) {
-            newNode->next = llist;
-            return newNode;
+    if (position == 0) {
+        newNode->next = llist;
+        return newNode;
+    }
+    
+    SinglyLinkedListNode* node = llist;
+    int pos = 0;
+    while (node->next) {
+        pos++;
+        if (pos == position){
+            SinglyLinkedListNode* nextNode = node->next;
+            node->next = newNode;
+            newNode->next = nextNode;
+            break;
         }
-            
-        SinglyLinkedListNode* node = llist;
-        int pos = 0;
-        while (node->next) {
-            pos++;
-            if (pos == position){
-                SinglyLinkedListNode* nextNode = node->next;
-                node->next = newNode;
-                newNode->next = nextNode;
-                break;
-            }
-            node = node->next;
-        }
-        return llist;
+        node = node->next;
+    }
+    return llist;
 }
 
 SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* llist, int position) {
-        if (position == 0) {
-            return llist->next;
+    if (position == 0) {
+        return llist->next;
+    }
+    
+    SinglyLinkedListNode* node = llist;
+    int pos = 0;
+    while (node->next) {
+        pos++;
+        if (pos == position){
+            node->next = node->next->next;
+            break;
         }
-            
-        SinglyLinkedListNode* node = llist;
-        int pos = 0;
-        while (node->next) {
-            pos++;
-            if (pos == position){
-                node->next = node->next->next;
-                break;
-            }
-            node = node->next;
-        }
-        return llist;
+        node = node->next;
+    }
+    return llist;
 }
 
 void printList(SinglyLinkedListNode* llist) {
@@ -110,13 +110,13 @@ SinglyLinkedListNode* reverseList(SinglyLinkedListNode* llist) {
 bool compare_lists(SinglyLinkedListNode* head1, SinglyLinkedListNode* head2) {
     SinglyLinkedListNode* node1 = head1;
     SinglyLinkedListNode* node2 = head2;
-     while (node1 && node2) {
-            if (node1->data != node2->data) {
-                return false;
-            }
-            node1 = node1->next;
-            node2 = node2->next;
+    while (node1 && node2) {
+        if (node1->data != node2->data) {
+            return false;
         }
+        node1 = node1->next;
+        node2 = node2->next;
+    }
     return !node1 && !node2;
 }
 
@@ -194,6 +194,20 @@ bool has_cycle(SinglyLinkedListNode* head) {
     }
     return false;
 }
+/*
+ https://leetcode.com/problems/add-two-numbers/description/?envType=study-plan-v2&envId=top-interview-150
+2. Add Two Numbers
+ You are given two non-empty linked lists representing two non-negative integers.
+ The digits are stored in reverse order, and each of their nodes contains a single digit.
+ Add the two numbers and return the sum as a linked list.
+ 
+ You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+ 
+ Example 1:
+ Input: l1 = [2,4,3], l2 = [5,6,4]
+ Output: [7,0,8]
+ Explanation: 342 + 465 = 807. 
+*/
 
 SinglyLinkedListNode* addTwoNumbers(SinglyLinkedListNode* l1, SinglyLinkedListNode* l2) {
     SinglyLinkedListNode *result = nullptr;
@@ -205,17 +219,20 @@ SinglyLinkedListNode* addTwoNumbers(SinglyLinkedListNode* l1, SinglyLinkedListNo
         int n1 = pl1 == nullptr ? 0 : pl1->data;
         int n2 = pl2 == nullptr ? 0 : pl2->data;
         int summ = n1 + n2 + added;
-                int n = summ % 10;
-                added = summ / 10;
-                if (pr == nullptr){
-                    pr = new SinglyLinkedListNode(n);
-                    result = pr;
-                } else {
-                    pr->next = new SinglyLinkedListNode(n);
-                    pr = pr->next;
-                }
+        int n = summ % 10;
+        added = summ / 10;
+        if (pr == nullptr){
+            pr = new SinglyLinkedListNode(n);
+            result = pr;
+        } else {
+            pr->next = new SinglyLinkedListNode(n);
+            pr = pr->next;
+        }
         if (pl1 != nullptr) pl1 = pl1->next;
-       if (pl2 != nullptr) pl2 = pl2->next;
+        if (pl2 != nullptr) pl2 = pl2->next;
+    }
+    if (added > 0){
+        pr->next = new SinglyLinkedListNode(added);
     }
     return result;
 }
@@ -230,13 +247,28 @@ void linkedList_ex(){
     list = insertNodeAtTail(list, 5);
     list = insertNodeAtTail(list, 6);
     list = insertNodeAtHead(list, 0);
-//    list = reverseList(list);
-//    printList(list);
+    //    list = reverseList(list);
+    //    printList(list);
     
     SinglyLinkedListNode *list2 = NULL;
     list2 = insertNodeAtTail(list2, 1);
     list2 = insertNodeAtTail(list2, 2);
     list2 = insertNodeAtTail(list2, 5);
     
-    int v = getNodeFromTailPosition(list, 2);
+//    int v = getNodeFromTailPosition(list, 2);
+    
+    SinglyLinkedListNode *list3 = NULL;
+    list3 = insertNodeAtTail(list3, 2);
+    list3 = insertNodeAtTail(list3, 4);
+    list3 = insertNodeAtTail(list3, 3);
+    
+    SinglyLinkedListNode *list4 = NULL;
+    list4 = insertNodeAtTail(list4, 5);
+    list4 = insertNodeAtTail(list4, 6);
+    list4 = insertNodeAtTail(list4, 4);
+    
+    SinglyLinkedListNode *list5 = addTwoNumbers(list3, list4);
+    printf("asda");
 }
+
+
